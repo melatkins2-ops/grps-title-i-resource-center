@@ -78,6 +78,44 @@ details.v66-more .v66-more-body{padding:0 14px 14px}
  }
 }
 </style>
+
+<style id="mobile-landscape-header-v73">
+/* Keep primary navigation visible on phones in landscape orientation.
+   Landscape phones often exceed the previous 760px breakpoint. */
+@media (max-width: 1024px) and (orientation: landscape){
+  header nav, .topbar nav, .site-header nav, .nav, .navlinks, .nav-links,
+  .desktop-nav, .main-nav, .primary-nav {
+    display:flex !important;
+    visibility:visible !important;
+    opacity:1 !important;
+  }
+  .mobile-primary-v72{
+    display:flex !important;
+    width:100% !important;
+    box-sizing:border-box !important;
+    overflow-x:auto !important;
+    white-space:nowrap !important;
+    gap:6px !important;
+    padding:8px 12px !important;
+    background:#003f73 !important;
+    border-top:3px solid #f58220 !important;
+    -webkit-overflow-scrolling:touch;
+  }
+  .mobile-primary-v72 a{
+    flex:0 0 auto !important;
+    color:#fff !important;
+    text-decoration:none !important;
+    font:800 14px Arial,sans-serif !important;
+    padding:9px 11px !important;
+    border-radius:8px !important;
+    background:rgba(255,255,255,.08) !important;
+  }
+}
+/* Also cover small tablets / browser chrome reducing CSS viewport height */
+@media (max-width: 1180px) and (max-height: 620px){
+  .mobile-primary-v72{display:flex !important;}
+}
+</style>
 </head><body>
 <section class="hero"><div style="font-size:.72rem;font-weight:900;letter-spacing:.12em;color:#ffd4b3">GRPS TITLE I • GUIDED RESOURCE FINDER</div><h1>Find the right resource</h1><p>Answer two quick questions. The finder will tell you where to start, what to use next, and when a deeper example or professional-learning resource is worth opening.</p></section><section id="synonym-help-v69" style="max-width:1180px;margin:10px auto;padding:0 18px"><div style="background:#f7fafc;border:1px solid #d8e0e7;border-radius:8px;padding:11px 13px;font-size:.76rem;color:#526579"><strong style="color:#003b70">You can search in everyday language.</strong> Try words such as <em>food, gift card, family night, meeting, tutor, teacher salary, time sheet, evidence, review, private school, transportation, software, conference</em>.</div></section><section id="use-when-v65" style="max-width:1320px;margin:12px auto;padding:0 18px"><div style="display:flex;gap:10px;align-items:flex-start;background:#f7fafc;border:1px solid #d8e0e7;border-radius:8px;padding:11px 13px"><span style="background:#003b70;color:#fff;font-size:.66rem;font-weight:900;padding:5px 7px;border-radius:5px;white-space:nowrap">USE THIS WHEN</span><span style="color:#526579;font-size:.78rem">Use this when you know the question but do not know which resource contains the answer.</span></div></section>
 <div class="wrap">

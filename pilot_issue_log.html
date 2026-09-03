@@ -49,4 +49,42 @@
  }
 }
 </style>
+
+<style id="mobile-landscape-header-v73">
+/* Keep primary navigation visible on phones in landscape orientation.
+   Landscape phones often exceed the previous 760px breakpoint. */
+@media (max-width: 1024px) and (orientation: landscape){
+  header nav, .topbar nav, .site-header nav, .nav, .navlinks, .nav-links,
+  .desktop-nav, .main-nav, .primary-nav {
+    display:flex !important;
+    visibility:visible !important;
+    opacity:1 !important;
+  }
+  .mobile-primary-v72{
+    display:flex !important;
+    width:100% !important;
+    box-sizing:border-box !important;
+    overflow-x:auto !important;
+    white-space:nowrap !important;
+    gap:6px !important;
+    padding:8px 12px !important;
+    background:#003f73 !important;
+    border-top:3px solid #f58220 !important;
+    -webkit-overflow-scrolling:touch;
+  }
+  .mobile-primary-v72 a{
+    flex:0 0 auto !important;
+    color:#fff !important;
+    text-decoration:none !important;
+    font:800 14px Arial,sans-serif !important;
+    padding:9px 11px !important;
+    border-radius:8px !important;
+    background:rgba(255,255,255,.08) !important;
+  }
+}
+/* Also cover small tablets / browser chrome reducing CSS viewport height */
+@media (max-width: 1180px) and (max-height: 620px){
+  .mobile-primary-v72{display:flex !important;}
+}
+</style>
 </head><body><section class="hero"><h1 style="margin:0">End-user pilot issue log</h1><p>Capture patterns, not every preference.</p></section><div class="wrap"><div class="note"><strong>Priority:</strong> Critical = accuracy/compliance or task-blocking; High = major confusion or missing required support; Medium = repeated usability problem; Low = preference/polish.</div><table><thead><tr><th>User/Role</th><th>Task</th><th>What happened?</th><th>Page/tool</th><th>Priority</th><th>Pattern?</th><th>Recommended change</th><th>Status</th></tr></thead><tbody><tr><td>&nbsp;</td><tr><td>&nbsp;</td><tr><td>&nbsp;</td><tr><td>&nbsp;</td><tr><td>&nbsp;</td><tr><td>&nbsp;</td><tr><td>&nbsp;</td><tr><td>&nbsp;</td></tr><tr><td>&nbsp;</td><tr><td>&nbsp;</td><tr><td>&nbsp;</td><tr><td>&nbsp;</td><tr><td>&nbsp;</td><tr><td>&nbsp;</td><tr><td>&nbsp;</td><tr><td>&nbsp;</td></tr><tr><td>&nbsp;</td><tr><td>&nbsp;</td><tr><td>&nbsp;</td><tr><td>&nbsp;</td><tr><td>&nbsp;</td><tr><td>&nbsp;</td><tr><td>&nbsp;</td><tr><td>&nbsp;</td></tr><tr><td>&nbsp;</td><tr><td>&nbsp;</td><tr><td>&nbsp;</td><tr><td>&nbsp;</td><tr><td>&nbsp;</td><tr><td>&nbsp;</td><tr><td>&nbsp;</td><tr><td>&nbsp;</td></tr><tr><td>&nbsp;</td><tr><td>&nbsp;</td><tr><td>&nbsp;</td><tr><td>&nbsp;</td><tr><td>&nbsp;</td><tr><td>&nbsp;</td><tr><td>&nbsp;</td><tr><td>&nbsp;</td></tr><tr><td>&nbsp;</td><tr><td>&nbsp;</td><tr><td>&nbsp;</td><tr><td>&nbsp;</td><tr><td>&nbsp;</td><tr><td>&nbsp;</td><tr><td>&nbsp;</td><tr><td>&nbsp;</td></tr><tr><td>&nbsp;</td><tr><td>&nbsp;</td><tr><td>&nbsp;</td><tr><td>&nbsp;</td><tr><td>&nbsp;</td><tr><td>&nbsp;</td><tr><td>&nbsp;</td><tr><td>&nbsp;</td></tr><tr><td>&nbsp;</td><tr><td>&nbsp;</td><tr><td>&nbsp;</td><tr><td>&nbsp;</td><tr><td>&nbsp;</td><tr><td>&nbsp;</td><tr><td>&nbsp;</td><tr><td>&nbsp;</td></tr><tr><td>&nbsp;</td><tr><td>&nbsp;</td><tr><td>&nbsp;</td><tr><td>&nbsp;</td><tr><td>&nbsp;</td><tr><td>&nbsp;</td><tr><td>&nbsp;</td><tr><td>&nbsp;</td></tr><tr><td>&nbsp;</td><tr><td>&nbsp;</td><tr><td>&nbsp;</td><tr><td>&nbsp;</td><tr><td>&nbsp;</td><tr><td>&nbsp;</td><tr><td>&nbsp;</td><tr><td>&nbsp;</td></tr><tr><td>&nbsp;</td><tr><td>&nbsp;</td><tr><td>&nbsp;</td><tr><td>&nbsp;</td><tr><td>&nbsp;</td><tr><td>&nbsp;</td><tr><td>&nbsp;</td><tr><td>&nbsp;</td></tr><tr><td>&nbsp;</td><tr><td>&nbsp;</td><tr><td>&nbsp;</td><tr><td>&nbsp;</td><tr><td>&nbsp;</td><tr><td>&nbsp;</td><tr><td>&nbsp;</td><tr><td>&nbsp;</td></tr></tbody></table></div><a class="global-work-v71" href="my_title_i_work.html">My Work</a><a class="global-help-v71" href="quick_help.html">Quick Help</a><a class="global-home-v71" href="index.html" aria-label="Home" title="Home">⌂</a></body></html>

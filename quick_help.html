@@ -53,6 +53,44 @@ body{margin:0;background:var(--bg);font-family:Arial,Helvetica,sans-serif;color:
  }
 }
 </style>
+
+<style id="mobile-landscape-header-v73">
+/* Keep primary navigation visible on phones in landscape orientation.
+   Landscape phones often exceed the previous 760px breakpoint. */
+@media (max-width: 1024px) and (orientation: landscape){
+  header nav, .topbar nav, .site-header nav, .nav, .navlinks, .nav-links,
+  .desktop-nav, .main-nav, .primary-nav {
+    display:flex !important;
+    visibility:visible !important;
+    opacity:1 !important;
+  }
+  .mobile-primary-v72{
+    display:flex !important;
+    width:100% !important;
+    box-sizing:border-box !important;
+    overflow-x:auto !important;
+    white-space:nowrap !important;
+    gap:6px !important;
+    padding:8px 12px !important;
+    background:#003f73 !important;
+    border-top:3px solid #f58220 !important;
+    -webkit-overflow-scrolling:touch;
+  }
+  .mobile-primary-v72 a{
+    flex:0 0 auto !important;
+    color:#fff !important;
+    text-decoration:none !important;
+    font:800 14px Arial,sans-serif !important;
+    padding:9px 11px !important;
+    border-radius:8px !important;
+    background:rgba(255,255,255,.08) !important;
+  }
+}
+/* Also cover small tablets / browser chrome reducing CSS viewport height */
+@media (max-width: 1180px) and (max-height: 620px){
+  .mobile-primary-v72{display:flex !important;}
+}
+</style>
 </head><body><section class="hero"><div style="font-size:.7rem;font-weight:900;letter-spacing:.1em;color:#ffd4b3">TITLE I QUICK HELP</div><h1>Not sure what to do?</h1><p>Choose the question closest to yours. You will be routed to the tool that can help.</p></section><section id="quick-search-v68" style="max-width:1060px;margin:16px auto 8px;padding:0 18px"><label for="qhSearch" style="display:block;font-size:.72rem;font-weight:900;color:#003b70;margin-bottom:5px">TYPE A WORD OR QUESTION</label><input id="qhSearch" type="search" placeholder="Example: food, meeting, staff, family, purchase, review..." style="width:100%;font:inherit;padding:12px;border:1px solid #bcc9d4;border-radius:8px;background:#fff"><div id="qhCount" style="font-size:.7rem;color:#5d6b78;margin-top:5px"></div></section><div class="wrap"><details class="q"><summary>I want to buy something. How do I know if Title I can pay for it?</summary><div class="ans">Start with the need and Title I purpose—not the item. The purchase tool walks you through allowability, documentation, and concerns.<br><a href="guided_purchase.html">Check the purchase →</a></div></details><details class="q"><summary>I have a family event coming up. What do I need to do?</summary><div class="ans">Use the family-engagement planner to connect the event to a learning need, family participation, access, and evidence.<br><a href="guided_family_engagement.html">Plan the activity →</a></div></details><details class="q"><summary>What exactly has to be covered at the Annual Title I Meeting?</summary><div class="ans">Use the Annual Meeting planner. It includes the required content, sample agenda structure, family participation, and evidence to retain.<br><a href="guided_annual_meeting.html">Plan the meeting →</a></div></details><details class="q"><summary>What should our Title I team talk about each month?</summary><div class="ans">Use three questions: What is working? What needs attention? What will we do next? Only document items that need a decision or follow-up.<br><a href="continuous_improvement_action_center.html">Open monthly review →</a></div></details><details class="q"><summary>I am worried a Title I-funded employee is doing work outside the funded role.</summary><div class="ans">Compare the funded purpose, actual duties, schedule, salary charges, and documentation. Resolve role drift rather than documenting around it.<br><a href="staffing_documentation_hub.html">Review funded staff →</a></div></details><details class="q"><summary>We have an MDE review coming. Where do I start?</summary><div class="ans">Start with strong implementation expectations, then identify where evidence lives and assign follow-up for gaps.<br><a href="guided_onsite_review.html">Get ready for review →</a></div></details><details class="q"><summary>I need a form, example, MDE link, or deeper guidance.</summary><div class="ans">Use the resource finder rather than browsing the entire library.<br><a href="resource_finder.html">Find the resource →</a></div></details><details class="q"><summary>I still do not know what to use.</summary><div class="ans">Go to the task-based start page and choose the statement closest to what you are trying to accomplish.<br><a href="task_start.html">Choose a task →</a></div></details></div><script id="quick-help-search-v68">
 (function(){const input=document.getElementById("qhSearch"),items=[...document.querySelectorAll(".q")],count=document.getElementById("qhCount");function run(){const q=(input.value||"").toLowerCase().trim();let n=0;items.forEach(el=>{const ok=!q||el.textContent.toLowerCase().includes(q);el.style.display=ok?"":"none";if(ok)n++});count.textContent=q?`${n} matching question${n===1?"":"s"}`:"";}input.addEventListener("input",run);})();
 </script><section id="pilot-feedback-v70" style="max-width:1060px;margin:12px auto;padding:0 18px"><div style="background:#fff7ef;border-left:6px solid #F58220;padding:11px 13px"><strong style="color:#003b70">Testing the Resource Center?</strong> <a href="end_user_feedback.html" style="font-weight:900;color:#003b70">Open the end-user feedback guide →</a></div></section><a class="global-work-v71" href="my_title_i_work.html">My Work</a><a class="global-help-v71" href="quick_help.html">Quick Help</a><a class="global-home-v71" href="index.html" aria-label="Home" title="Home">⌂</a></body></html>
