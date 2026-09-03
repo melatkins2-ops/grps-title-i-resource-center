@@ -1,5 +1,13 @@
 <!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>My Title I Work</title>
 <style>:root{--n:#003b70;--o:#F58220;--m:#5d6b78;--l:#d8e0e7;--bg:#eef2f6}*{box-sizing:border-box}body{margin:0;background:var(--bg);font-family:Arial,Helvetica,sans-serif;color:#172333;font-size:18px;line-height:1.45;padding-bottom:90px}.hero{background:var(--n);color:#fff;border-bottom:6px solid var(--o);padding:28px max(20px,calc((100vw - 1080px)/2))}.hero h1{font-size:clamp(2rem,4vw,3rem);margin:3px 0}.hero p{max-width:820px;color:#e7f0f6}.wrap{max-width:1080px;margin:18px auto;padding:0 18px}.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.card{background:#fff;border:1px solid var(--l);border-radius:9px;padding:15px}.card h2{font-size:1rem;color:var(--n);margin:0 0 4px}.small{font-size:.73rem;color:var(--m)}a.btn,button.btn{display:inline-block;margin-top:8px;background:var(--n);color:#fff!important;text-decoration:none;border:0;border-radius:6px;padding:8px 10px;font-weight:900;font-size:.72rem;cursor:pointer}.empty{background:#fff7ef;border-left:6px solid var(--o);padding:13px;border-radius:0 8px 8px 0;color:#526579}@media(max-width:720px){.grid{grid-template-columns:1fr}}</style>
+
+<style id="persistent-nav-v71">
+.global-home-v71{position:fixed;right:18px;bottom:18px;z-index:2147483647;width:58px;height:58px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:#003b70;color:#fff!important;border:3px solid #fff;box-shadow:0 8px 24px rgba(0,0,0,.28);text-decoration:none!important;font-size:1.45rem;font-weight:900}
+.global-help-v71,.global-work-v71{position:fixed;right:18px;z-index:2147483646;background:#fff;color:#003b70!important;border:1px solid #bfcbd5;border-radius:999px;padding:8px 11px;text-decoration:none!important;font:900 12px Arial;box-shadow:0 5px 16px rgba(0,0,0,.14)}
+.global-help-v71{bottom:86px}.global-work-v71{bottom:124px}
+@media(max-width:650px){.global-home-v71{right:12px;bottom:12px;width:54px;height:54px}.global-help-v71,.global-work-v71{right:12px}.global-help-v71{bottom:74px}.global-work-v71{bottom:110px}}
+@media print{.global-home-v71,.global-help-v71,.global-work-v71{display:none!important}}
+</style>
 </head><body>
 <section class="hero"><div style="font-size:.68rem;font-weight:900;color:#ffd4b3;letter-spacing:.08em">GRPS TITLE I</div><h1>My Title I Work</h1><p>Return to tools you have used recently. Progress is saved in this browser when a tool supports local saving.</p></section>
 <div class="wrap"><div id="recentWrap" class="grid"></div><div id="emptyState" class="empty" style="display:none"><strong>No recent work is saved yet.</strong> Start with a task. As you use supported tools, this page becomes your return point.</div><div style="margin-top:14px"><a class="btn" href="task_start.html">Choose a task →</a> <button class="btn" onclick="clearRecent()">Clear recent history</button></div></div>
@@ -28,4 +36,4 @@ function loadRecent(){
 }
 function clearRecent(){tools.forEach(function(x){localStorage.removeItem(x[2])});loadRecent();}
 loadRecent();
-</script></body></html>
+</script><a class="global-work-v71" href="my_title_i_work.html">My Work</a><a class="global-help-v71" href="quick_help.html">Quick Help</a><a class="global-home-v71" href="index.html" aria-label="Home" title="Home">⌂</a></body></html>

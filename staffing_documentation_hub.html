@@ -124,7 +124,15 @@ details.v66-more .v66-more-body{padding:0 14px 14px}
   input,select,textarea,button{min-height:44px}
 }
 </style>
-<style id="print-style-v69">@media print{#print-v69,#saveStatusV69,.v66-skip{display:none!important}body{background:#fff!important}}</style></head>
+<style id="print-style-v69">@media print{#print-v69,#saveStatusV69,.v66-skip{display:none!important}body{background:#fff!important}}</style>
+<style id="persistent-nav-v71">
+.global-home-v71{position:fixed;right:18px;bottom:18px;z-index:2147483647;width:58px;height:58px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:#003b70;color:#fff!important;border:3px solid #fff;box-shadow:0 8px 24px rgba(0,0,0,.28);text-decoration:none!important;font-size:1.45rem;font-weight:900}
+.global-help-v71,.global-work-v71{position:fixed;right:18px;z-index:2147483646;background:#fff;color:#003b70!important;border:1px solid #bfcbd5;border-radius:999px;padding:8px 11px;text-decoration:none!important;font:900 12px Arial;box-shadow:0 5px 16px rgba(0,0,0,.14)}
+.global-help-v71{bottom:86px}.global-work-v71{bottom:124px}
+@media(max-width:650px){.global-home-v71{right:12px;bottom:12px;width:54px;height:54px}.global-help-v71,.global-work-v71{right:12px}.global-help-v71{bottom:74px}.global-work-v71{bottom:110px}}
+@media print{.global-home-v71,.global-help-v71,.global-work-v71{display:none!important}}
+</style>
+</head>
 <body><div id="print-v69" style="max-width:1320px;margin:12px auto;padding:0 18px;text-align:right"><button onclick="window.print()" style="background:#003b70;color:#fff;border:0;border-radius:6px;padding:9px 12px;font-weight:900;cursor:pointer">Print / Save PDF</button></div>
 <header><div class="page-purpose-v48" style="max-width:1240px;margin:12px auto;padding:0 18px">
 <div style="background:#fff;border:1px solid #d9e0e7;border-left:5px solid #F58220;border-radius:0 8px 8px 0;padding:12px 14px">
@@ -190,4 +198,4 @@ function restore(){const raw=localStorage.getItem(KEY);if(!raw)return;let data;t
 function save(){localStorage.setItem(KEY,JSON.stringify(collect()));const x=document.getElementById("saveStatusV69");if(x)x.textContent="Saved "+new Date().toLocaleTimeString([],{hour:"numeric",minute:"2-digit"});}
 document.addEventListener("input",function(){clearTimeout(window.__saveV69);window.__saveV69=setTimeout(save,350);});
 document.addEventListener("change",save);window.addEventListener("DOMContentLoaded",restore);
-})();</script><section id="person-help-v69" style="max-width:1320px;margin:12px auto;padding:0 18px"><div style="background:#fff;border:1px solid #d8e0e7;border-radius:8px;padding:12px 14px"><strong style="color:#003b70">Still unsure?</strong> <span style="color:#526579">If funding, assignment, or time-and-effort alignment is unclear, resolve it with State & Federal Programs and the employee’s supervisor.</span> <a href="help_contacts.html" style="font-weight:900;color:#003b70">Get help →</a></div></section><div id="record-disclosure-v70" style="max-width:1320px;margin:8px auto;padding:0 18px"><div style="font-size:.68rem;color:#5d6b78;background:#f7fafc;border:1px solid #d8e0e7;border-radius:7px;padding:8px 10px"><strong>Saving note:</strong> Work on this page may be saved in this browser for convenience. It is not the district system of record. Retain required documentation in the appropriate GRPS location.</div></div></body></html>
+})();</script><section id="person-help-v69" style="max-width:1320px;margin:12px auto;padding:0 18px"><div style="background:#fff;border:1px solid #d8e0e7;border-radius:8px;padding:12px 14px"><strong style="color:#003b70">Still unsure?</strong> <span style="color:#526579">If funding, assignment, or time-and-effort alignment is unclear, resolve it with State & Federal Programs and the employee’s supervisor.</span> <a href="help_contacts.html" style="font-weight:900;color:#003b70">Get help →</a></div></section><div id="record-disclosure-v70" style="max-width:1320px;margin:8px auto;padding:0 18px"><div style="font-size:.68rem;color:#5d6b78;background:#f7fafc;border:1px solid #d8e0e7;border-radius:7px;padding:8px 10px"><strong>Saving note:</strong> Work on this page may be saved in this browser for convenience. It is not the district system of record. Retain required documentation in the appropriate GRPS location.</div></div><a class="global-work-v71" href="my_title_i_work.html">My Work</a><a class="global-help-v71" href="quick_help.html">Quick Help</a><a class="global-home-v71" href="index.html" aria-label="Home" title="Home">⌂</a></body></html>
