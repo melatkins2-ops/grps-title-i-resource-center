@@ -7,4 +7,46 @@ body{margin:0;background:#eef2f6;font-family:Arial,Helvetica,sans-serif;color:#1
 @media(max-width:650px){.global-home-v71{right:12px;bottom:12px;width:54px;height:54px}.global-help-v71,.global-work-v71{right:12px}.global-help-v71{bottom:74px}.global-work-v71{bottom:110px}}
 @media print{.global-home-v71,.global-help-v71,.global-work-v71{display:none!important}}
 </style>
+
+<style id="mobile-header-nav-v72">
+/* Mobile header navigation: keep primary choices visible and tappable. */
+@media (max-width: 760px){
+  header nav, .topbar nav, .site-header nav, .nav, .navlinks, .nav-links {
+    display:flex !important;
+    width:100% !important;
+    overflow-x:auto !important;
+    white-space:nowrap !important;
+    gap:8px !important;
+    padding:8px 12px 10px !important;
+    -webkit-overflow-scrolling:touch;
+    scrollbar-width:none;
+  }
+  header nav::-webkit-scrollbar, .topbar nav::-webkit-scrollbar,
+  .site-header nav::-webkit-scrollbar, .nav::-webkit-scrollbar,
+  .navlinks::-webkit-scrollbar, .nav-links::-webkit-scrollbar {display:none;}
+  header nav a, .topbar nav a, .site-header nav a, .nav a, .navlinks a, .nav-links a {
+    display:inline-flex !important;
+    flex:0 0 auto !important;
+    min-height:42px !important;
+    align-items:center !important;
+    padding:8px 10px !important;
+    font-size:14px !important;
+  }
+  /* If the original header hides navigation on phones, explicitly restore common nav containers. */
+  .desktop-nav, .main-nav, .primary-nav {display:flex !important;}
+}
+/* Dedicated fallback strip for the homepage if original navigation remains structurally hidden. */
+.mobile-primary-v72{display:none}
+@media(max-width:760px){
+ .mobile-primary-v72{
+   display:flex; position:relative; z-index:1000; width:100%; box-sizing:border-box;
+   overflow-x:auto; white-space:nowrap; gap:6px; padding:8px 12px;
+   background:#003f73; border-top:3px solid #f58220; -webkit-overflow-scrolling:touch;
+ }
+ .mobile-primary-v72 a{
+   flex:0 0 auto; color:#fff!important; text-decoration:none!important; font:800 14px Arial,sans-serif;
+   padding:9px 11px; border-radius:8px; background:rgba(255,255,255,.08)
+ }
+}
+</style>
 </head><body><section class="hero"><div style="font-size:.7rem;font-weight:900;color:#ffd4b3;letter-spacing:.08em">GRPS TITLE I</div><h1>Most used tools</h1><p style="color:#e7f0f6">Five common Title I jobs. Start here when you want to get directly to the work.</p></section><div class="wrap"><div class="item"><div class="num">1</div><div><h2>Can Title I pay for this?</h2><p>Check a purchase or service before funds are committed.</p></div><a href="guided_purchase.html">Open →</a></div><div class="item"><div class="num">2</div><div><h2>Plan a family engagement activity</h2><p>Build a stronger activity and know what evidence to keep.</p></div><a href="guided_family_engagement.html">Open →</a></div><div class="item"><div class="num">3</div><div><h2>Plan the Annual Title I Meeting</h2><p>Build the required meeting content and participation.</p></div><a href="guided_annual_meeting.html">Open →</a></div><div class="item"><div class="num">4</div><div><h2>Hold the monthly Title I review</h2><p>Use three questions and leave with next actions.</p></div><a href="continuous_improvement_action_center.html">Open →</a></div><div class="item"><div class="num">5</div><div><h2>Find a requirement or example</h2><p>Search for the resource you need without browsing everything.</p></div><a href="resource_finder.html">Open →</a></div></div><a class="global-work-v71" href="my_title_i_work.html">My Work</a><a class="global-help-v71" href="quick_help.html">Quick Help</a><a class="global-home-v71" href="index.html" aria-label="Home" title="Home">⌂</a></body></html>

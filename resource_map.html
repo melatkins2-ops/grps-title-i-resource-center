@@ -30,4 +30,46 @@ details.v66-more .v66-more-body{padding:0 14px 14px}
 @media(max-width:650px){.global-home-v71{right:12px;bottom:12px;width:54px;height:54px}.global-help-v71,.global-work-v71{right:12px}.global-help-v71{bottom:74px}.global-work-v71{bottom:110px}}
 @media print{.global-home-v71,.global-help-v71,.global-work-v71{display:none!important}}
 </style>
+
+<style id="mobile-header-nav-v72">
+/* Mobile header navigation: keep primary choices visible and tappable. */
+@media (max-width: 760px){
+  header nav, .topbar nav, .site-header nav, .nav, .navlinks, .nav-links {
+    display:flex !important;
+    width:100% !important;
+    overflow-x:auto !important;
+    white-space:nowrap !important;
+    gap:8px !important;
+    padding:8px 12px 10px !important;
+    -webkit-overflow-scrolling:touch;
+    scrollbar-width:none;
+  }
+  header nav::-webkit-scrollbar, .topbar nav::-webkit-scrollbar,
+  .site-header nav::-webkit-scrollbar, .nav::-webkit-scrollbar,
+  .navlinks::-webkit-scrollbar, .nav-links::-webkit-scrollbar {display:none;}
+  header nav a, .topbar nav a, .site-header nav a, .nav a, .navlinks a, .nav-links a {
+    display:inline-flex !important;
+    flex:0 0 auto !important;
+    min-height:42px !important;
+    align-items:center !important;
+    padding:8px 10px !important;
+    font-size:14px !important;
+  }
+  /* If the original header hides navigation on phones, explicitly restore common nav containers. */
+  .desktop-nav, .main-nav, .primary-nav {display:flex !important;}
+}
+/* Dedicated fallback strip for the homepage if original navigation remains structurally hidden. */
+.mobile-primary-v72{display:none}
+@media(max-width:760px){
+ .mobile-primary-v72{
+   display:flex; position:relative; z-index:1000; width:100%; box-sizing:border-box;
+   overflow-x:auto; white-space:nowrap; gap:6px; padding:8px 12px;
+   background:#003f73; border-top:3px solid #f58220; -webkit-overflow-scrolling:touch;
+ }
+ .mobile-primary-v72 a{
+   flex:0 0 auto; color:#fff!important; text-decoration:none!important; font:800 14px Arial,sans-serif;
+   padding:9px 11px; border-radius:8px; background:rgba(255,255,255,.08)
+ }
+}
+</style>
 </head><body><section class="hero"><div style="font-size:.72rem;font-weight:900;letter-spacing:.12em;color:#ffd4b3">GRPS TITLE I • RESOURCE MAP</div><h1>How the resources fit together</h1><p>This is a map of the work—not a second resource library. Each lane starts with the functional workspace and keeps supporting resources connected to the task.</p></section><div class="wrap"><section class="lane"><h2>Continuous Improvement</h2><p>Need → strategy → implementation → evidence → decision → evaluation</p><div class="path"><span class="node">Need</span><span class="arrow">→</span><span class="node">strategy</span><span class="arrow">→</span><span class="node">implementation</span><span class="arrow">→</span><span class="node">evidence</span><span class="arrow">→</span><span class="node">decision</span><span class="arrow">→</span><span class="node">evaluation</span></div><a class="btn" href="continuous_improvement_action_center.html">Open workspace →</a></section><section class="lane"><h2>Spending & Allowability</h2><p>Need → purpose → allowability → approval → coding → evidence</p><div class="path"><span class="node">Need</span><span class="arrow">→</span><span class="node">purpose</span><span class="arrow">→</span><span class="node">allowability</span><span class="arrow">→</span><span class="node">approval</span><span class="arrow">→</span><span class="node">coding</span><span class="arrow">→</span><span class="node">evidence</span></div><a class="btn" href="guided_purchase.html">Open workspace →</a></section><section class="lane"><h2>Family Engagement</h2><p>Scholar need → caregiver outcome → accessible activity → two-way input → evidence → follow-up</p><div class="path"><span class="node">Scholar need</span><span class="arrow">→</span><span class="node">caregiver outcome</span><span class="arrow">→</span><span class="node">accessible activity</span><span class="arrow">→</span><span class="node">two-way input</span><span class="arrow">→</span><span class="node">evidence</span><span class="arrow">→</span><span class="node">follow-up</span></div><a class="btn" href="guided_family_engagement.html">Open workspace →</a></section><section class="lane"><h2>Annual Title I Meeting</h2><p>Plan → required content → family participation → evidence → follow-up</p><div class="path"><span class="node">Plan</span><span class="arrow">→</span><span class="node">required content</span><span class="arrow">→</span><span class="node">family participation</span><span class="arrow">→</span><span class="node">evidence</span><span class="arrow">→</span><span class="node">follow-up</span></div><a class="btn" href="guided_annual_meeting.html">Open workspace →</a></section><section class="lane"><h2>Staffing & Time/Effort</h2><p>Funded purpose → role → actual assignment → documentation → monitoring → correction</p><div class="path"><span class="node">Funded purpose</span><span class="arrow">→</span><span class="node">role</span><span class="arrow">→</span><span class="node">actual assignment</span><span class="arrow">→</span><span class="node">documentation</span><span class="arrow">→</span><span class="node">monitoring</span><span class="arrow">→</span><span class="node">correction</span></div><a class="btn" href="staffing_documentation_hub.html">Open workspace →</a></section><section class="lane"><h2>Monitoring & Readiness</h2><p>Implementation → evidence location → gap → corrective action → readiness summary</p><div class="path"><span class="node">Implementation</span><span class="arrow">→</span><span class="node">evidence location</span><span class="arrow">→</span><span class="node">gap</span><span class="arrow">→</span><span class="node">corrective action</span><span class="arrow">→</span><span class="node">readiness summary</span></div><a class="btn" href="guided_onsite_review.html">Open workspace →</a></section><section class="lane"><h2>Private School</h2><p>Participation → consultation → program design → service delivery → monitoring → evaluation</p><div class="path"><span class="node">Participation</span><span class="arrow">→</span><span class="node">consultation</span><span class="arrow">→</span><span class="node">program design</span><span class="arrow">→</span><span class="node">service delivery</span><span class="arrow">→</span><span class="node">monitoring</span><span class="arrow">→</span><span class="node">evaluation</span></div><a class="btn" href="private_school_hub.html">Open workspace →</a></section><section class="lane"><h2>Still not sure?</h2><p>Use the Find the Right Resource to get a recommended starting point in two questions.</p><a class="btn" href="resource_finder.html">Open Find the Right Resource →</a></section></div><a class="global-work-v71" href="my_title_i_work.html">My Work</a><a class="global-help-v71" href="quick_help.html">Quick Help</a><a class="global-home-v71" href="index.html" aria-label="Home" title="Home">⌂</a></body></html>
