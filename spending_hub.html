@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+
+<html><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>Spending &amp; Allowability | GRPS Title I Resource Center</title><style>
+:root{--navy:#003b70;--orange:#F58220;--ink:#172333;--muted:#637083;--line:#d9e0e7;--bg:#f5f7fa;--soft:#eef3f7}
+*{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--ink);line-height:1.5;font-size:17px}
+a{color:var(--navy);text-decoration:none}a:hover{text-decoration:underline}.wrap{max-width:1080px;margin:auto;padding:0 24px}
+header{background:var(--navy);color:#fff;border-bottom:5px solid var(--orange)}.hero{padding:24px 0}.eyebrow{color:#ffd9bc;text-transform:uppercase;letter-spacing:.1em;font-size:.75rem;font-weight:800}
+h1{margin:5px 0 8px;font-size:2.2rem}.sub{margin:0;color:#e5eef5;max-width:850px}.back{display:inline-block;margin-top:14px;color:#fff;border:1px solid rgba(255,255,255,.45);padding:7px 10px;border-radius:5px}
+main{padding:26px 0 55px}.panel{background:#fff;border:1px solid var(--line);border-top:4px solid rgba(245,130,32,.72);padding:20px;margin:14px 0;border-radius:8px}
+.panel h2{margin:0 0 9px;color:var(--navy);font-size:1.45rem}.panel h3{color:var(--navy);font-size:1.05rem}.panel p{color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.card{background:#fff;border:1px solid var(--line);padding:16px;border-radius:7px}
+.card h3{margin:0 0 6px;color:var(--navy);font-size:1.05rem}.card p{margin:0;color:var(--muted);font-size:.94rem}
+.linkrow{display:grid;gap:8px;margin-top:10px}.linkrow a{font-weight:700;font-size:.92rem}
+.callout{background:#FFF8F2;border-left:5px solid var(--orange);padding:14px 16px;margin:14px 0}.tablewrap{overflow:auto}
+table{width:100%;border-collapse:collapse;background:#fff}th,td{border:1px solid var(--line);padding:10px;text-align:left;vertical-align:top}th{background:var(--soft);color:var(--navy);border-bottom:3px solid rgba(245,130,32,.65)}
+.chips{display:flex;gap:8px;flex-wrap:wrap}.chip{background:var(--soft);border:1px solid var(--line);border-radius:999px;padding:6px 9px;color:var(--navy);font-size:.82rem;font-weight:700}
+@media(max-width:760px){.grid{grid-template-columns:1fr}.wrap{padding:0 16px}h1{font-size:1.9rem}}
+</style>
+<style id="grps-readable-type-v9">
+html { font-size: 18px !important; }
+body { font-size: 19px !important; line-height: 1.58 !important; }
+h1 { font-size: clamp(2.35rem, 4vw, 3.15rem) !important; line-height: 1.08 !important; }
+h2 { font-size: clamp(1.55rem, 2.4vw, 2rem) !important; line-height: 1.18 !important; }
+h3 { font-size: 1.18rem !important; line-height: 1.3 !important; }
+p, li, td, th, label, summary { font-size: 1rem !important; }
+small, .small { font-size: .9rem !important; }
+.eyebrow { font-size: .82rem !important; }
+.sub, .hero p { font-size: 1.08rem !important; }
+nav, nav a { font-size: .92rem !important; }
+.btn, button { font-size: .94rem !important; }
+.task b, .quick b, .card h3, .result b { font-size: 1.08rem !important; }
+.task span, .quick span, .card p, .result p, .source-note { font-size: .94rem !important; }
+.task em, .tags, .filter { font-size: .86rem !important; }
+.role { font-size: .94rem !important; padding: 11px 15px !important; }
+input, select, textarea { font-size: 1rem !important; }
+table { font-size: 1rem !important; }
+th, td { padding: 12px !important; }
+.panel, .card, .task { padding: 19px !important; }
+@media (max-width: 600px) {
+  html { font-size: 17px !important; }
+  body { font-size: 18px !important; }
+  h1 { font-size: 2.25rem !important; }
+}
+</style>
+<style id="home-button-v11">
+.home-button-v11{
+  display:inline-flex;align-items:center;gap:7px;
+  margin-top:14px;margin-right:8px;padding:8px 12px;
+  border-radius:5px;background:#F58220;color:#172333 !important;
+  font-weight:800;font-size:.94rem;text-decoration:none !important;
+}
+.home-button-v11:hover{filter:brightness(.96)}
+</style>
+<style id="global-home-v37">
+.global-home-bar{position:sticky;top:0;z-index:10000;background:#f5f7fa;border-bottom:1px solid #d9e0e7;padding:8px 14px}
+.global-home-btn{display:inline-flex!important;align-items:center;gap:6px;background:#F58220!important;color:#172333!important;
+border:0!important;border-radius:6px!important;padding:8px 13px!important;font-weight:900!important;text-decoration:none!important;
+box-shadow:none!important}
+.global-home-btn:hover{filter:brightness(.97)}
+@media print{.global-home-bar{display:none!important}}
+</style>
+<style id="hub-enhancement-v40">
+.hub-intro{border-left:6px solid #F58220!important;background:linear-gradient(135deg,#fff 0%,#f7f9fb 100%)!important}
+.hub-intro h2{margin:2px 0 6px!important}.hub-intro p{margin:0!important;color:#637083}
+.task-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:12px}
+.task-card{display:block;text-decoration:none!important;border:1px solid #d9e0e7;border-top:4px solid #F58220;border-radius:8px;background:#fff;padding:14px;color:#172333!important}
+.task-card:hover{border-color:#003b70;background:#f8fafc}.task-card strong{display:block;color:#003b70;font-size:1rem}.task-card span{display:block;color:#637083;font-size:.8rem;margin-top:4px}
+.quality-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.quality-card{border:1px solid #d9e0e7;border-left:5px solid #003b70;border-radius:7px;padding:13px;background:#fff}.quality-card h3{margin:0!important;color:#003b70!important;font-size:1rem!important}.quality-card p{margin:4px 0 0!important;color:#637083;font-size:.82rem!important}
+.example-strip{display:grid;grid-template-columns:1fr 1fr;gap:10px}.example-strip>div{border-radius:7px;padding:12px 14px}.example-strip .weak{background:#fff8e8;border:1px solid #f0d39e}.example-strip .strong{background:#f2f8f4;border:1px solid #b5d8c3}.example-strip b{display:block;margin-bottom:4px}.weak b{color:#8a5100}.strong b{color:#245f43}.example-strip p{margin:0!important;font-size:.82rem!important}
+@media(max-width:850px){.task-grid{grid-template-columns:1fr 1fr}.quality-grid,.example-strip{grid-template-columns:1fr}}
+@media(max-width:600px){.task-grid{grid-template-columns:1fr}}
+</style>
+<style id="global-ux-v48">
+:root{--grps-navy:#003b70;--grps-blue:#0065a8;--grps-orange:#F58220;--grps-bg:#eef2f6;--grps-line:#d9e0e7;--grps-ink:#172333}
+html{scroll-behavior:smooth}
+body{padding-bottom:92px!important}
+a,button,input,select,textarea{font-family:inherit}
+button,.btn,a.btn{cursor:pointer}
+.floating-home-v48{
+ position:fixed;right:22px;bottom:22px;z-index:99999;width:58px;height:58px;border-radius:50%;
+ display:flex;align-items:center;justify-content:center;background:var(--grps-navy);color:#fff!important;
+ border:3px solid #fff;box-shadow:0 8px 22px rgba(0,0,0,.22);text-decoration:none!important;
+ font-size:1.45rem;font-weight:900;line-height:1
+}
+.floating-home-v48:hover{background:var(--grps-orange);color:#172333!important;transform:translateY(-1px)}
+.floating-home-v48:focus{outline:4px solid rgba(245,130,32,.35);outline-offset:2px}
+.topbar,.global-home-bar{display:none!important}
+main,.wrap,.container{scroll-margin-top:20px}
+.card,.panel,section,.tile{scroll-margin-top:18px}
+@media(max-width:700px){
+ body{padding-bottom:86px!important}
+ .floating-home-v48{right:16px;bottom:16px;width:54px;height:54px;font-size:1.35rem}
+}
+@media print{.floating-home-v48{display:none!important}}
+</style>
+<style id="home-nav-v49">
+.floating-home-v49{
+ position:fixed;right:22px;bottom:22px;z-index:999999;width:58px;height:58px;border-radius:50%;
+ display:flex;align-items:center;justify-content:center;background:#003b70;color:#fff!important;
+ border:3px solid #fff;box-shadow:0 8px 22px rgba(0,0,0,.22);text-decoration:none!important;
+ font-size:1.45rem;font-weight:900;line-height:1
+}
+.floating-home-v49:hover{background:#F58220;color:#172333!important;transform:translateY(-1px)}
+.floating-home-v49:focus{outline:4px solid rgba(245,130,32,.35);outline-offset:2px}
+@media(max-width:700px){.floating-home-v49{right:16px;bottom:16px;width:54px;height:54px}}
+@media print{.floating-home-v49{display:none!important}}
+</style>
+<style id="ux-cleanup-v66">
+/* v66: reduce visual noise and improve end-user scanning */
+details.v66-more{margin-top:14px;border:1px solid #d9e0e7;border-radius:8px;background:#fff}
+details.v66-more>summary{cursor:pointer;padding:12px 14px;font-weight:900;color:#003b70;list-style:none}
+details.v66-more>summary::-webkit-details-marker{display:none}
+details.v66-more>summary::after{content:"+";float:right;font-size:1.15rem}
+details.v66-more[open]>summary::after{content:"−"}
+details.v66-more .v66-more-body{padding:0 14px 14px}
+.v66-small-note{font-size:.74rem;color:#5d6b78}
+.v66-skip{position:absolute;left:-9999px;top:auto}
+.v66-skip:focus{left:12px;top:12px;z-index:999999;background:#fff;color:#003b70;padding:8px 10px;border:2px solid #F58220;border-radius:5px}
+@media(max-width:700px){
+  body{font-size:17px!important}
+  h1{font-size:2rem!important;line-height:1.08!important}
+  h2{font-size:1.3rem!important}
+  .card,.panel,.box,.item,.step{padding:14px!important}
+  input,select,textarea,button{min-height:44px}
+}
+</style>
+</head>
+<body>
+<header><div class="page-purpose-v48" style="max-width:1240px;margin:12px auto;padding:0 18px">
+<div style="background:#fff;border:1px solid #d9e0e7;border-left:5px solid #F58220;border-radius:0 8px 8px 0;padding:12px 14px">
+<strong style="color:#003b70">Spending &amp; Allowability:</strong>
+<span style="color:#5f6d7d;font-size:.84rem"> Complete the task here first. Use examples, guidance, and source links only when they help you finish the work.</span>
+</div></div><div class="wrap hero"><div class="eyebrow">GRPS TITLE I RESOURCE CENTER</div><h1>Spending &amp; Allowability</h1><p class="sub">Use this pathway before obligating Title I funds.</p></div></header><main><div class="wrap">
+<section class="panel hub-intro"><div class="eyebrow">SPENDING &amp; ALLOWABILITY</div><h2>Start with the decision you need to make</h2><p>Use this hub to decide whether a proposed cost should move forward for Title I review, what documentation to keep, and which tool to use next.</p></section><section id="orientation-v64" style="max-width:1320px;margin:14px auto;padding:0 18px"><div style="background:#fff7ef;border-left:6px solid #F58220;border-radius:0 9px 9px 0;padding:14px 16px"><strong style="color:#003b70">Start with the purpose:</strong> <span style="color:#526579">Identify why the cost is needed and what Title I purpose it supports. Then address allowability, approval, coding, and evidence.</span></div></section>
+<section class="panel"><h2>What are you trying to do?</h2><div class="task-grid">
+<a class="task-card" href="guided_purchase.html"><strong>Check a proposed purchase</strong><span>Walk through need, purpose, allowability, documentation, and readiness.</span></a>
+<a class="task-card" href="purchase_precheck.html"><strong>Use a quick pre-check</strong><span>Run a shorter printable review before submitting a request.</span></a>
+<a class="task-card" href="guided_evidence.html"><strong>Figure out what evidence to keep</strong><span>Match the activity or purchase to the documentation that should be retained.</span></a>
+</div></section>
+<section class="panel"><h2>What stronger spending documentation looks like</h2><div class="quality-grid">
+<div class="quality-card"><h3>Need is visible</h3><p>The rationale connects the cost to an approved Title I need, strategy, activity, or family-engagement objective.</p></div>
+<div class="quality-card"><h3>Allowability is documented</h3><p>The file shows why the cost is reasonable, necessary, allocable, and supplemental to the approved Title I work.</p></div>
+<div class="quality-card"><h3>Approval happened before the purchase</h3><p>Required approval and procurement steps occur before funds are obligated.</p></div>
+<div class="quality-card"><h3>The evidence chain is complete</h3><p>Rationale, approval, coding, invoice/receipt, and proof of actual use all tell the same story.</p></div>
+</div></section>
+<section class="panel"><h2>Example</h2><div class="example-strip"><div class="weak"><b>Too weak</b><p>Invoice + receipt only.</p></div><div class="strong"><b>Stronger</b><p>Need/rationale + approval + procurement as applicable + coding + invoice/receipt + evidence the item/service was used for the approved Title I purpose.</p></div></div></section>
+<section class="panel"><h2>Before you spend</h2><div class="grid">
+<div class="card"><h3>1. Identify the need</h3><p>What approved Title I need, strategy, activity, or family-engagement objective does this cost support?</p></div>
+<div class="card"><h3>2. Check current allowability</h3><p>Use the current MDE Allowable Use FAQ and current federal requirements—not an older local list when the guidance conflicts.</p></div>
+<div class="card"><h3>3. Check coding</h3><p>Confirm the current function and object code and whether the cost requires prior approval.</p></div>
+<div class="card"><h3>4. Keep evidence</h3><p>Retain rationale, approval, ordering/payment record, coding, and evidence the item/service was used for the approved purpose.</p></div>
+</div></section>
+<div class="callout"><strong>Do not treat a resource list as approval.</strong> Every cost still has to be reasonable, necessary, allocable, aligned to the approved program, and properly documented.</div>
+<section class="panel"><h2>Tools &amp; current sources</h2><div class="linkrow"><a href="guided_purchase.html">Interactive purchase check →</a><a href="purchase_precheck.html">Printable purchase pre-check →</a><a href="https://www.michigan.gov/mde/services/school-performance-supports/educational-supports/state-and-federal-programs" target="_blank">Current MDE State &amp; Federal Programs guidance →</a></div></section>
+</div></main>
+<style id="integration-v53-css">
+.integration-v53{max-width:1320px;margin:18px auto;padding:0 18px}
+.integration-v53 .v53panel{background:#fff;border:1px solid #d8e0e7;border-radius:10px;padding:18px;margin:14px 0}
+.integration-v53 h2{color:#003b70;margin:0 0 8px}.integration-v53 h3{color:#003b70;margin:0 0 5px;font-size:1rem}
+.integration-v53 p,.integration-v53 li{color:#526173}.integration-v53 .grid2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.integration-v53 .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.integration-v53 .card{border:1px solid #d8e0e7;border-radius:8px;padding:14px;background:#fff}
+.integration-v53 .chain{display:grid;grid-template-columns:repeat(7,1fr);gap:6px}.integration-v53 .chain>div{border:1px solid #d8e0e7;border-top:5px solid #F58220;border-radius:8px;padding:10px;font-size:.74rem}
+.integration-v53 .chain b{display:block;color:#003b70;margin-bottom:4px}.integration-v53 .callout{border-left:6px solid #F58220;background:#fff7ef;padding:13px;border-radius:0 8px 8px 0}
+.integration-v53 .btn{display:inline-block;text-decoration:none;background:#003b70;color:#fff!important;font-weight:900;padding:9px 12px;border-radius:6px;margin:4px 5px 4px 0}
+.integration-v53 table{width:100%;border-collapse:collapse}.integration-v53 th,.integration-v53 td{padding:9px;border-bottom:1px solid #d8e0e7;text-align:left;vertical-align:top}.integration-v53 th{color:#003b70;font-size:.72rem}.integration-v53 td{font-size:.75rem}
+@media(max-width:900px){.integration-v53 .grid2,.integration-v53 .grid3{grid-template-columns:1fr}.integration-v53 .chain{grid-template-columns:1fr 1fr}}@media(max-width:600px){.integration-v53 .chain{grid-template-columns:1fr}}
+</style>
+<div class="integration-v53"><section class="v53panel"><h2>Code by purpose—not by where money is available</h2>
+<p>Use the function code that describes <strong>why</strong> the expenditure exists. Function, object, and fund/grant answer different questions.</p>
+<div class="grid3"><div class="card"><h3>Function</h3><p>Why / purpose.</p></div><div class="card"><h3>Object</h3><p>What is purchased or paid.</p></div><div class="card"><h3>Fund / grant</h3><p>Which funding source pays the cost.</p></div></div>
+<table><thead><tr><th>Question</th><th>High-use direction</th></tr></thead><tbody>
+<tr><td>Basic classroom instruction?</td><td>Applicable grade-span function 111 / 112 / 113. Review 119 for basic summer instruction.</td></tr>
+<tr><td>Added-needs / supplemental instruction for specifically identified scholars?</td><td>Review 125 — Compensatory Education.</td></tr>
+<tr><td>Scholar support service?</td><td>Attendance 211 | Guidance 212 | Health 213 | Social Work 216.</td></tr>
+<tr><td>Professional development?</td><td>Direct-instruction recipient → 221. Support-service/non-instructional recipient → 283.</td></tr>
+<tr><td>Family/community engagement?</td><td>Review 331. If the purpose is specifically attendance improvement, review 211 instead.</td></tr>
+<tr><td>Transportation / evaluation / data / fiscal support?</td><td>271 Transportation | 281 Evaluation | 284 Information Management | 252 Fiscal Services.</td></tr>
+</tbody></table>
+<div class="callout"><strong>Summer school nuance:</strong> current MDE coding guidance distinguishes added-needs instruction for specifically identified scholars (125) from basic educational programming that also serves other scholars (119).</div>
+<p><strong>Current source:</strong> MDE Function and Object Code Frequently Asked Questions, dated June 3, 2026.</p></section></div>
+<section style="max-width:1320px;margin:14px auto;padding:0 18px"><div style="background:#f8fafc;border:1px solid #d8e0e7;border-radius:8px;padding:13px"><strong style="color:#003b70">Need more depth?</strong> <span style="color:#526173">Open the curated Fiscal, Allowability &amp; Coding resource pack for professional learning, examples, and implementation references.</span> <a href="curated_resource_packs.html" style="font-weight:900;color:#003b70">Open Deeper Resources →</a></div></section></body></html>

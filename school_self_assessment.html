@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+
+<html><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>School Title I Self-Assessment | GRPS Title I Resource Center</title><style>
+:root{--navy:#003b70;--orange:#F58220;--ink:#172333;--muted:#637083;--line:#d9e0e7;--bg:#f5f7fa;--soft:#eef3f7;--green:#e8f4ec;--yellow:#fff6df;--red:#fdeceb}
+*{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--ink);line-height:1.5;font-size:17px}
+a{color:var(--navy);text-decoration:none}a:hover{text-decoration:underline}.wrap{max-width:1100px;margin:auto;padding:0 24px}
+header{background:var(--navy);color:#fff;border-bottom:5px solid var(--orange)}.hero{padding:24px 0}.eyebrow{color:#ffd9bc;text-transform:uppercase;letter-spacing:.1em;font-size:.75rem;font-weight:800}
+h1{margin:5px 0 8px;font-size:2.2rem}.sub{margin:0;color:#e5eef5;max-width:880px}.back{display:inline-block;margin-top:14px;color:#fff;border:1px solid rgba(255,255,255,.45);padding:7px 10px;border-radius:5px}
+main{padding:26px 0 55px}.panel{background:#fff;border:1px solid var(--line);border-top:4px solid var(--orange);padding:20px;margin:14px 0;border-radius:8px}
+.panel h2{margin:0 0 9px;color:var(--navy);font-size:1.45rem}.panel h3{color:var(--navy)}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.card{background:#fff;border:1px solid var(--line);padding:16px;border-radius:7px}
+.callout{background:#FFF8F2;border-left:5px solid var(--orange);padding:14px 16px;margin:14px 0}
+table{width:100%;border-collapse:collapse;background:#fff}th,td{border:1px solid var(--line);padding:10px;text-align:left;vertical-align:top}th{background:var(--soft);color:var(--navy);border-bottom:3px solid var(--orange)}
+.status{font-weight:700;padding:4px 7px;border-radius:999px;display:inline-block}.green{background:var(--green)}.yellow{background:var(--yellow)}.red{background:var(--red)}
+input[type=radio]{transform:scale(1.15)}button{background:var(--navy);color:#fff;border:0;padding:10px 14px;border-radius:5px;font-weight:700;cursor:pointer}
+.result{margin-top:14px;padding:14px;background:#fff;border-left:5px solid var(--orange)}
+@media(max-width:760px){.grid{grid-template-columns:1fr}.wrap{padding:0 16px}}
+</style>
+<style id="grps-readable-type-v9">
+html { font-size: 18px !important; }
+body { font-size: 19px !important; line-height: 1.58 !important; }
+h1 { font-size: clamp(2.35rem, 4vw, 3.15rem) !important; line-height: 1.08 !important; }
+h2 { font-size: clamp(1.55rem, 2.4vw, 2rem) !important; line-height: 1.18 !important; }
+h3 { font-size: 1.18rem !important; line-height: 1.3 !important; }
+p, li, td, th, label, summary { font-size: 1rem !important; }
+small, .small { font-size: .9rem !important; }
+.eyebrow { font-size: .82rem !important; }
+.sub, .hero p { font-size: 1.08rem !important; }
+nav, nav a { font-size: .92rem !important; }
+.btn, button { font-size: .94rem !important; }
+.task b, .quick b, .card h3, .result b { font-size: 1.08rem !important; }
+.task span, .quick span, .card p, .result p, .source-note { font-size: .94rem !important; }
+.task em, .tags, .filter { font-size: .86rem !important; }
+.role { font-size: .94rem !important; padding: 11px 15px !important; }
+input, select, textarea { font-size: 1rem !important; }
+table { font-size: 1rem !important; }
+th, td { padding: 12px !important; }
+.panel, .card, .task { padding: 19px !important; }
+@media (max-width: 600px) {
+  html { font-size: 17px !important; }
+  body { font-size: 18px !important; }
+  h1 { font-size: 2.25rem !important; }
+}
+</style>
+<style id="home-button-v11">
+.home-button-v11{
+  display:inline-flex;align-items:center;gap:7px;
+  margin-top:14px;margin-right:8px;padding:8px 12px;
+  border-radius:5px;background:#F58220;color:#172333 !important;
+  font-weight:800;font-size:.94rem;text-decoration:none !important;
+}
+.home-button-v11:hover{filter:brightness(.96)}
+</style>
+<style id="toggle-response-shared-v22">
+.response-toggle-group{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+.response-toggle{
+  border:1px solid #cfd8e1;border-radius:999px;padding:8px 12px;
+  background:#f8fafc;color:#003b70;font-weight:800;cursor:pointer;font-size:.92rem
+}
+.response-toggle:hover{background:#eef3f7;border-color:#003b70}
+.response-toggle.active[data-value="yes"]{background:#edf7f1;border-color:#2f7f57;color:#245f43}
+.response-toggle.active[data-value="no"]{background:#fdeceb;border-color:#b23a35;color:#8a2d29}
+.response-toggle.active[data-value="unsure"]{background:#fff8e8;border-color:#F58220;color:#8a5100}
+.toggle-condition{border:1px solid #d9e0e7;border-left:5px solid #F58220;border-radius:7px;padding:14px 16px;margin:10px 0;background:#fff}
+.toggle-condition.is-yes{border-left-color:#2f7f57;background:#f7fbf8}
+.toggle-condition.is-no{border-left-color:#b23a35;background:#fff7f6}
+.toggle-condition.is-unsure{border-left-color:#F58220;background:#fffaf2}
+</style>
+<style id="global-home-v37">
+.global-home-bar{position:sticky;top:0;z-index:10000;background:#f5f7fa;border-bottom:1px solid #d9e0e7;padding:8px 14px}
+.global-home-btn{display:inline-flex!important;align-items:center;gap:6px;background:#F58220!important;color:#172333!important;
+border:0!important;border-radius:6px!important;padding:8px 13px!important;font-weight:900!important;text-decoration:none!important;
+box-shadow:none!important}
+.global-home-btn:hover{filter:brightness(.97)}
+@media print{.global-home-bar{display:none!important}}
+</style>
+<style id="global-ux-v48">
+:root{--grps-navy:#003b70;--grps-blue:#0065a8;--grps-orange:#F58220;--grps-bg:#eef2f6;--grps-line:#d9e0e7;--grps-ink:#172333}
+html{scroll-behavior:smooth}
+body{padding-bottom:92px!important}
+a,button,input,select,textarea{font-family:inherit}
+button,.btn,a.btn{cursor:pointer}
+.floating-home-v48{
+ position:fixed;right:22px;bottom:22px;z-index:99999;width:58px;height:58px;border-radius:50%;
+ display:flex;align-items:center;justify-content:center;background:var(--grps-navy);color:#fff!important;
+ border:3px solid #fff;box-shadow:0 8px 22px rgba(0,0,0,.22);text-decoration:none!important;
+ font-size:1.45rem;font-weight:900;line-height:1
+}
+.floating-home-v48:hover{background:var(--grps-orange);color:#172333!important;transform:translateY(-1px)}
+.floating-home-v48:focus{outline:4px solid rgba(245,130,32,.35);outline-offset:2px}
+.topbar,.global-home-bar{display:none!important}
+main,.wrap,.container{scroll-margin-top:20px}
+.card,.panel,section,.tile{scroll-margin-top:18px}
+@media(max-width:700px){
+ body{padding-bottom:86px!important}
+ .floating-home-v48{right:16px;bottom:16px;width:54px;height:54px;font-size:1.35rem}
+}
+@media print{.floating-home-v48{display:none!important}}
+</style>
+<style id="home-nav-v49">
+.floating-home-v49{
+ position:fixed;right:22px;bottom:22px;z-index:999999;width:58px;height:58px;border-radius:50%;
+ display:flex;align-items:center;justify-content:center;background:#003b70;color:#fff!important;
+ border:3px solid #fff;box-shadow:0 8px 22px rgba(0,0,0,.22);text-decoration:none!important;
+ font-size:1.45rem;font-weight:900;line-height:1
+}
+.floating-home-v49:hover{background:#F58220;color:#172333!important;transform:translateY(-1px)}
+.floating-home-v49:focus{outline:4px solid rgba(245,130,32,.35);outline-offset:2px}
+@media(max-width:700px){.floating-home-v49{right:16px;bottom:16px;width:54px;height:54px}}
+@media print{.floating-home-v49{display:none!important}}
+</style>
+
+<style id="ux-cleanup-v66">
+/* v66: reduce visual noise and improve end-user scanning */
+details.v66-more{margin-top:14px;border:1px solid #d9e0e7;border-radius:8px;background:#fff}
+details.v66-more>summary{cursor:pointer;padding:12px 14px;font-weight:900;color:#003b70;list-style:none}
+details.v66-more>summary::-webkit-details-marker{display:none}
+details.v66-more>summary::after{content:"+";float:right;font-size:1.15rem}
+details.v66-more[open]>summary::after{content:"−"}
+details.v66-more .v66-more-body{padding:0 14px 14px}
+.v66-small-note{font-size:.74rem;color:#5d6b78}
+.v66-skip{position:absolute;left:-9999px;top:auto}
+.v66-skip:focus{left:12px;top:12px;z-index:999999;background:#fff;color:#003b70;padding:8px 10px;border:2px solid #F58220;border-radius:5px}
+@media(max-width:700px){
+  body{font-size:17px!important}
+  h1{font-size:2rem!important;line-height:1.08!important}
+  h2{font-size:1.3rem!important}
+  .card,.panel,.box,.item,.step{padding:14px!important}
+  input,select,textarea,button{min-height:44px}
+}
+</style>
+</head><body>
+<header><div class="wrap hero"><div class="eyebrow">GRPS TITLE I RESOURCE CENTER</div><h1>School Title I Self-Assessment</h1><p class="sub">A quick implementation health check for school teams.</p></div></header><main><div class="wrap">
+<div class="callout"><strong>Rate current implementation—not intent.</strong> Green means the requirement/work is operating and evidence is current; yellow means partial/inconsistent; red means absent, materially off track, or evidence cannot substantiate implementation.</div>
+<form id="assess">
+<section class="panel"><h2>Program implementation</h2><p>Approved Title I strategies/services are operating as planned and implementation evidence is current.</p>
+  
+  
+
+
+<input id="assess_program" type="hidden" value=""/>
+<div class="response-toggle-group">
+<button class="response-toggle" data-value="2" onclick="toggleAssessment('program','2',this)" type="button">Green</button>
+<button class="response-toggle" data-value="1" onclick="toggleAssessment('program','1',this)" type="button">Yellow</button>
+<button class="response-toggle" data-value="0" onclick="toggleAssessment('program','0',this)" type="button">Red</button>
+</div></section><section class="panel"><h2>Scholar impact</h2><p>The school routinely reviews whether intended scholars receive services and whether they are making expected progress.</p>
+  
+  
+
+
+<input id="assess_scholars" type="hidden" value=""/>
+<div class="response-toggle-group">
+<button class="response-toggle" data-value="2" onclick="toggleAssessment('scholars','2',this)" type="button">Green</button>
+<button class="response-toggle" data-value="1" onclick="toggleAssessment('scholars','1',this)" type="button">Yellow</button>
+<button class="response-toggle" data-value="0" onclick="toggleAssessment('scholars','0',this)" type="button">Red</button>
+</div></section><section class="panel"><h2>Staffing</h2><p>Title I-funded staff roles, assignments, schedules, and required documentation align to the approved program.</p>
+  
+  
+
+
+<input id="assess_staff" type="hidden" value=""/>
+<div class="response-toggle-group">
+<button class="response-toggle" data-value="2" onclick="toggleAssessment('staff','2',this)" type="button">Green</button>
+<button class="response-toggle" data-value="1" onclick="toggleAssessment('staff','1',this)" type="button">Yellow</button>
+<button class="response-toggle" data-value="0" onclick="toggleAssessment('staff','0',this)" type="button">Red</button>
+</div></section><section class="panel"><h2>Spending</h2><p>Title I expenditures are on pace, connected to approved work, properly reviewed/coded, and documented.</p>
+  
+  
+
+
+<input id="assess_spend" type="hidden" value=""/>
+<div class="response-toggle-group">
+<button class="response-toggle" data-value="2" onclick="toggleAssessment('spend','2',this)" type="button">Green</button>
+<button class="response-toggle" data-value="1" onclick="toggleAssessment('spend','1',this)" type="button">Yellow</button>
+<button class="response-toggle" data-value="0" onclick="toggleAssessment('spend','0',this)" type="button">Red</button>
+</div></section><section class="panel"><h2>Family engagement</h2><p>Required family engagement work is current, meaningful, learning-linked, accessible, and documented.</p>
+  
+  
+
+
+<input id="assess_family" type="hidden" value=""/>
+<div class="response-toggle-group">
+<button class="response-toggle" data-value="2" onclick="toggleAssessment('family','2',this)" type="button">Green</button>
+<button class="response-toggle" data-value="1" onclick="toggleAssessment('family','1',this)" type="button">Yellow</button>
+<button class="response-toggle" data-value="0" onclick="toggleAssessment('family','0',this)" type="button">Red</button>
+</div></section><section class="panel"><h2>Evidence readiness</h2><p>Required program, fiscal, staffing, family, and monitoring evidence is organized and retrievable.</p>
+  
+  
+
+
+<input id="assess_evidence" type="hidden" value=""/>
+<div class="response-toggle-group">
+<button class="response-toggle" data-value="2" onclick="toggleAssessment('evidence','2',this)" type="button">Green</button>
+<button class="response-toggle" data-value="1" onclick="toggleAssessment('evidence','1',this)" type="button">Yellow</button>
+<button class="response-toggle" data-value="0" onclick="toggleAssessment('evidence','0',this)" type="button">Red</button>
+</div></section><section class="panel"><h2>Evaluation</h2><p>The school uses implementation and outcome evidence to decide what to continue, modify, intensify, or stop.</p>
+  
+  
+
+
+<input id="assess_evaluation" type="hidden" value=""/>
+<div class="response-toggle-group">
+<button class="response-toggle" data-value="2" onclick="toggleAssessment('evaluation','2',this)" type="button">Green</button>
+<button class="response-toggle" data-value="1" onclick="toggleAssessment('evaluation','1',this)" type="button">Yellow</button>
+<button class="response-toggle" data-value="0" onclick="toggleAssessment('evaluation','0',this)" type="button">Red</button>
+</div></section><button onclick="score()" type="button">Calculate implementation status</button><div class="result" id="result">Complete each area, then calculate.</div></form></div></main><script>
+function toggleAssessment(name,value,button){
+ const state=document.getElementById('assess_'+name);
+ const group=button.closest('.response-toggle-group');
+ const active=button.classList.contains('active');
+ group.querySelectorAll('.response-toggle').forEach(b=>b.classList.remove('active'));
+ if(active){state.value='';} else {state.value=value;button.classList.add('active');}
+ const r=document.getElementById('result'); if(r) r.innerHTML='Complete each area, then calculate.';
+}
+
+function score(){
+ const names=['program','scholars','staff','spend','family','evidence','evaluation']; let total=0, done=0, red=[];
+ names.forEach(n=>{let v=document.getElementById('assess_'+n)?.value||''; if(v!==''){done++;total+=Number(v);if(v==='0')red.push(n)}});
+ const r=document.getElementById('result');
+ if(done<names.length){r.innerHTML='<strong>Incomplete:</strong> rate all seven areas.';return}
+ const max=names.length*2, pct=Math.round(total/max*100);
+ let label=pct>=80?'Generally on track':pct>=55?'Needs targeted follow-up':'Immediate implementation attention needed';
+ r.innerHTML='<strong>'+label+' — '+pct+'%</strong><br>Use the score as a discussion prompt, not a compliance determination.'+(red.length?'<br><strong>Red areas:</strong> '+red.join(', '):'');
+}
+</script></body></html>

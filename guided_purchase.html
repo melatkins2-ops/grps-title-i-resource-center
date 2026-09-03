@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+
+<html><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>Can I Buy This With Title I? | GRPS Title I Resource Center</title><style>
+:root{--navy:#003b5c;--blue:#006494;--orange:#f28c28;--ink:#173042;--muted:#5d6c76;--bg:#f3f7fa;--line:#d8e3ea;--soft:#eaf3f8;--green:#156b46;--greenbg:#eaf5ef;--amber:#8a4f00;--amberbg:#fff4df;--red:#8a2f2f;--redbg:#fff0ef}
+*{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--ink);line-height:1.45}a{color:var(--blue);text-decoration:none}a:hover{text-decoration:underline}
+header{background:linear-gradient(125deg,var(--navy),var(--blue));color:#fff;border-bottom:6px solid var(--orange)}.wrap{max-width:1100px;margin:auto;padding:0 24px}.hero{padding:24px 0}.eyebrow{text-transform:uppercase;font-weight:700;letter-spacing:.1em;font-size:.76rem;color:#d8edf7}
+h1{margin:.35rem 0 .45rem;font-size:2.15rem}.sub{margin:0;color:#eef8fc;max-width:850px}.back{display:inline-block;margin-top:15px;color:#fff;border:1px solid rgba(255,255,255,.5);padding:7px 10px;border-radius:999px}
+main{padding:24px 0 55px}.stepper{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:18px}.step{background:#fff;border:1px solid var(--line);border-radius:999px;padding:7px 10px;font-size:.8rem}.step.active{background:var(--blue);color:#fff;border-color:var(--blue)}
+.panel{background:#fff;border:1px solid var(--line);border-radius:12px;padding:19px;margin:14px 0;box-shadow:0 2px 8px rgba(0,0,0,.035)}.panel h2{margin:0 0 7px}.panel p{margin:.35rem 0;color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.choice{display:block;width:100%;text-align:left;border:1px solid var(--line);background:#fff;border-radius:9px;padding:13px;cursor:pointer}.choice:hover,.choice.selected{border-color:var(--blue);background:#f0f7fb}
+label{display:block;font-weight:700;margin:11px 0 5px}select,input[type=text],textarea{width:100%;padding:10px;border:1px solid var(--line);border-radius:7px;background:#fff}textarea{min-height:90px}
+.check{display:flex;gap:9px;align-items:flex-start;margin:9px 0}.check input{margin-top:4px}.btn{border:1px solid var(--blue);background:var(--blue);color:white;padding:9px 13px;border-radius:7px;font-weight:700;cursor:pointer}.btn.secondary{background:white;color:var(--blue)}
+.result{display:none;padding:15px;border-radius:9px;margin-top:15px}.result.show{display:block}.yes{background:var(--greenbg);border:1px solid #b9ddca}.caution{background:var(--amberbg);border:1px solid #eed2a4}.no{background:var(--redbg);border:1px solid #ecc5c1}
+.callout{border-left:5px solid var(--orange);background:#fff8eb;padding:14px 16px;border-radius:7px;margin:14px 0}.source{font-size:.82rem;color:var(--muted);margin-top:14px}.source a{font-weight:700}
+table{width:100%;border-collapse:collapse;background:#fff}.tablewrap{overflow:auto}th,td{border:1px solid var(--line);padding:10px;text-align:left;vertical-align:top}th{background:var(--soft);color:var(--navy)}
+.printbox{background:#fff;border:2px dashed var(--line);border-radius:10px;padding:15px;margin-top:15px}.printbox h3{margin-top:0}
+@media(max-width:750px){.grid{grid-template-columns:1fr}.wrap{padding:0 16px}h1{font-size:1.8rem}}
+@media print{header .back,.no-print,.btn{display:none!important}body{background:#fff}.panel,.printbox{box-shadow:none;break-inside:avoid}}
+</style>
+<style id="grps-dashboard-style">
+:root{
+  --navy:#003b70!important;
+  --blue:#003b70!important;
+  --orange:#F58220!important;
+  --ink:#172333!important;
+  --muted:#637083!important;
+  --line:#d9e0e7!important;
+  --bg:#f5f7fa!important;
+  --white:#fff!important;
+  --soft:#eef3f7!important;
+  --soft2:#f8fafc!important;
+}
+html,body{font-family:Arial,Helvetica,sans-serif!important}
+body{background:var(--bg)!important;color:var(--ink)!important}
+header{background:var(--navy)!important;color:#fff!important;border-bottom:0!important;box-shadow:none!important}
+header .brand b,header .brand small,header nav a{color:#fff!important}
+header .seal,header .mark{background:#fff!important}
+header .seal svg{stroke:var(--navy)!important}
+header .mark:after{background:var(--orange)!important}
+nav a,nav button{font-family:Arial,Helvetica,sans-serif!important}
+.hero{background:#fff!important;color:var(--ink)!important;border-bottom:1px solid var(--line)!important}
+.hero-grid,.hero-inner{background:#fff!important}
+.hero h1,.hero h2,.hero-grid h1{color:var(--navy)!important}
+.hero p,.hero-grid p{color:var(--muted)!important}
+.eyebrow,.section-kicker{color:#B95500!important;font-weight:800!important;letter-spacing:.08em!important}
+.btn.primary,.btn,.openbtn{background:var(--navy)!important;color:#fff!important;border-radius:5px!important}
+.btn.secondary,.ghost{background:#fff!important;color:var(--navy)!important;border:1px solid #bbc6d1!important}
+.card,.action,.entry-card,.panel,.role-strip,.cycle-card,.browse,.titlei-intro,.system-visual,.launch-panel{
+  background:#fff!important;
+  border:1px solid var(--line)!important;
+  border-radius:8px!important;
+  box-shadow:none!important;
+}
+.card,.action{border-top:3px solid rgba(245,130,32,.62)!important}
+.card:hover,.action:hover{border-top-color:var(--orange)!important;transform:none!important;box-shadow:0 3px 10px rgba(0,0,0,.04)!important}
+.action h3,.card h3,.panel h2,.section-head h2,.titlei-intro h2,.role-strip strong,.flow-copy b{
+  color:var(--navy)!important;
+}
+.action-icon,.visual,.dot{background:#eef3f7!important;border-radius:6px!important}
+.action-icon svg,.visual svg,.dot svg,.titlei-visual svg{stroke:var(--navy)!important}
+.role,.titlei-chip,.status{background:#eef3f7!important;color:var(--navy)!important;border-radius:18px!important}
+.source-rule,.source-strip,.callout,.rule{
+  background:#FFF8F2!important;border-left:4px solid var(--orange)!important;border-radius:0 5px 5px 0!important;
+}
+.phase:before{background:var(--navy)!important}.phase:last-child:before{background:var(--orange)!important}
+.resource,.launch-link,.option{border-radius:5px!important}
+.resource:hover,.launch-link:hover,.option:hover{border-color:#aabac8!important;background:#f8fafc!important}
+table{background:#fff!important}
+th{background:#eef3f7!important;color:var(--navy)!important;border-bottom:3px solid rgba(245,130,32,.65)!important}
+input,select,textarea,.search{border-radius:5px!important}
+input:focus,select:focus,textarea:focus,.search:focus{outline:2px solid rgba(245,130,32,.3)!important;border-color:var(--orange)!important}
+footer{background:var(--bg)!important;color:var(--muted)!important}
+</style>
+<style id="grps-secondary-v2">
+html{font-size:17px}
+body{font-size:1rem}
+header{border-bottom:5px solid var(--orange)!important}
+h1{font-size:2.25rem!important}
+.panel h2{font-size:1.4rem!important}
+.panel p,.panel li,.panel td,.panel th,label{font-size:.98rem!important}
+.btn{font-size:.92rem!important}
+.step.active{background:var(--navy)!important;border-color:var(--navy)!important;box-shadow:inset 0 -3px 0 var(--orange)}
+.callout{border-left:5px solid var(--orange)!important}
+</style>
+<style id="grps-readable-type-v9">
+html { font-size: 18px !important; }
+body { font-size: 19px !important; line-height: 1.58 !important; }
+h1 { font-size: clamp(2.35rem, 4vw, 3.15rem) !important; line-height: 1.08 !important; }
+h2 { font-size: clamp(1.55rem, 2.4vw, 2rem) !important; line-height: 1.18 !important; }
+h3 { font-size: 1.18rem !important; line-height: 1.3 !important; }
+p, li, td, th, label, summary { font-size: 1rem !important; }
+small, .small { font-size: .9rem !important; }
+.eyebrow { font-size: .82rem !important; }
+.sub, .hero p { font-size: 1.08rem !important; }
+nav, nav a { font-size: .92rem !important; }
+.btn, button { font-size: .94rem !important; }
+.task b, .quick b, .card h3, .result b { font-size: 1.08rem !important; }
+.task span, .quick span, .card p, .result p, .source-note { font-size: .94rem !important; }
+.task em, .tags, .filter { font-size: .86rem !important; }
+.role { font-size: .94rem !important; padding: 11px 15px !important; }
+input, select, textarea { font-size: 1rem !important; }
+table { font-size: 1rem !important; }
+th, td { padding: 12px !important; }
+.panel, .card, .task { padding: 19px !important; }
+@media (max-width: 600px) {
+  html { font-size: 17px !important; }
+  body { font-size: 18px !important; }
+  h1 { font-size: 2.25rem !important; }
+}
+</style>
+<style id="home-button-v11">
+.home-button-v11{
+  display:inline-flex;align-items:center;gap:7px;
+  margin-top:14px;margin-right:8px;padding:8px 12px;
+  border-radius:5px;background:#F58220;color:#172333 !important;
+  font-weight:800;font-size:.94rem;text-decoration:none !important;
+}
+.home-button-v11:hover{filter:brightness(.96)}
+</style>
+<style id="required-validation-v18">
+#purchaseButton:disabled{background:#aab6c2!important;border-color:#aab6c2!important;color:#fff!important;cursor:not-allowed!important;opacity:.78}
+#missingList ul{margin:6px 0 0 20px;padding:0}
+#missingList li{margin:4px 0}
+.required-ok{background:#edf7f1!important;border-left:5px solid #2f7f57!important}
+</style>
+<style id="purchase-redesign-v19">
+.precheck-intro{margin:20px 0 10px}
+.precheck-intro h3{margin:0 0 4px;color:#003b70;font-size:1.2rem}
+.precheck-intro p{margin:0;color:#627083}
+.condition-card{border:1px solid #d9e0e7;border-left:5px solid #F58220;border-radius:7px;background:#fff;padding:16px 18px;margin:12px 0}
+.condition-copy strong{display:block;color:#172333;font-size:1.08rem;margin-bottom:4px}
+.condition-copy span{display:block;color:#627083;font-size:.96rem}
+.response-group{display:flex;gap:10px;flex-wrap:wrap;margin-top:13px}
+.response-btn{border:1px solid #cfd8e1;border-radius:999px;padding:9px 14px;background:#f8fafc;cursor:pointer;font-weight:800;color:#003b70;font-size:.95rem}
+.response-btn:hover{border-color:#003b70;background:#eef3f7}
+.response-btn.active{border-color:#003b70;background:#eef3f7;box-shadow:inset 0 -3px 0 #F58220}
+.response-btn.active[data-value="yes"]{background:#edf7f1;border-color:#2f7f57;color:#245f43}
+.response-btn.active[data-value="no"]{background:#fdeceb;border-color:#b23a35;color:#8a2d29}
+.response-btn.active[data-value="unsure"]{background:#fff8e8;border-color:#F58220;color:#8a5100}
+.condition-card.is-no{border-left-color:#b23a35;background:#fff7f6}
+.condition-card.is-unsure{border-left-color:#F58220;background:#fffaf2}
+.condition-card.is-yes{border-left-color:#2f7f57;background:#f7fbf8}
+#purchaseButton:disabled{background:#aab6c2!important;border-color:#aab6c2!important;color:#fff!important;cursor:not-allowed!important;opacity:.8}
+.outcome-list{margin:8px 0 0 20px;padding:0}.outcome-list li{margin:5px 0}
+</style>
+<style id="global-home-v37">
+.global-home-bar{position:sticky;top:0;z-index:10000;background:#f5f7fa;border-bottom:1px solid #d9e0e7;padding:8px 14px}
+.global-home-btn{display:inline-flex!important;align-items:center;gap:6px;background:#F58220!important;color:#172333!important;
+border:0!important;border-radius:6px!important;padding:8px 13px!important;font-weight:900!important;text-decoration:none!important;
+box-shadow:none!important}
+.global-home-btn:hover{filter:brightness(.97)}
+@media print{.global-home-bar{display:none!important}}
+</style>
+<style id="primary-workspace-v43">
+/* Primary workflow redesign */
+body{background:#eef2f6!important}
+.global-home-bar{background:#fff!important;border-bottom:1px solid #d9e0e7!important;padding:10px max(18px,calc((100vw - 1240px)/2))!important}
+header{display:none!important}
+main>.wrap,.wrap{max-width:1240px!important}
+.workspace-hero{background:#003b70;color:#fff;border-radius:0 0 14px 14px;padding:28px 32px 26px;margin:0 0 18px;position:relative;overflow:hidden}
+.workspace-hero:after{content:"";position:absolute;right:-55px;top:-70px;width:220px;height:220px;border:28px solid rgba(245,130,32,.28);border-radius:50%}
+.workspace-kicker{font-size:.78rem;font-weight:900;letter-spacing:.1em;color:#ffd1ad;text-transform:uppercase}
+.workspace-hero h1{color:#fff!important;font-size:clamp(2rem,3.4vw,2.8rem)!important;margin:5px 0 7px!important}
+.workspace-hero p{max-width:780px;color:#e9f1f7!important;font-size:1.02rem!important;margin:0!important}
+.workspace-outcome{display:flex;gap:10px;flex-wrap:wrap;margin-top:17px}
+.workspace-outcome span{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.25);padding:7px 10px;border-radius:6px;font-size:.8rem;font-weight:800}
+.workspace-layout{display:grid;grid-template-columns:270px minmax(0,1fr);gap:18px;align-items:start}
+.workspace-rail{position:sticky;top:66px;background:#fff;border:1px solid #d9e0e7;border-radius:10px;padding:16px}
+.workspace-rail h2{font-size:1rem!important;margin:0 0 10px!important;color:#003b70!important;border:0!important}
+.rail-step{display:flex;gap:10px;padding:11px 5px;border-bottom:1px solid #edf0f3}
+.rail-step:last-child{border-bottom:0}.rail-num{width:28px;height:28px;border-radius:50%;display:grid;place-items:center;background:#eef3f7;color:#003b70;font-weight:900;flex:0 0 auto}
+.rail-step b{display:block;color:#172333;font-size:.87rem}.rail-step small{display:block;color:#637083;font-size:.73rem;line-height:1.35;margin-top:2px}
+.workspace-main{min-width:0}
+.workspace-main .panel,.workspace-main section.panel{border:1px solid #d9e0e7!important;border-radius:10px!important;background:#fff!important;padding:22px!important;margin:0 0 14px!important;box-shadow:none!important}
+.workspace-main .panel h2{font-size:1.32rem!important;margin-top:0!important;border:0!important;padding:0!important}
+.workspace-main .panel h2:before{content:"";display:inline-block;width:6px;height:22px;background:#F58220;border-radius:3px;margin-right:9px;vertical-align:-4px}
+.workspace-main input,.workspace-main select,.workspace-main textarea{min-height:48px!important;border:1px solid #b9c4ce!important;background:#fff!important}
+.workspace-main button,.workspace-main .btn{min-height:46px!important}
+.workspace-main table{border:1px solid #d9e0e7!important;border-radius:8px;overflow:hidden}
+.workspace-main .stepbar,.workspace-main .steps{display:none!important}
+.workspace-main .callout,.workspace-main .source-rule{margin-top:12px!important}
+.workspace-tip{background:#fff8f2;border-left:5px solid #F58220;padding:13px 15px;border-radius:0 7px 7px 0;margin-bottom:14px}
+.workspace-tip b{color:#003b70}
+.workspace-actions{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:16px}
+.workspace-action{background:#fff;border:1px solid #d9e0e7;border-top:4px solid #F58220;border-radius:9px;padding:13px}
+.workspace-action b{display:block;color:#003b70}.workspace-action span{display:block;color:#637083;font-size:.78rem;margin-top:3px}
+.back,.home-button-v11{display:none!important}
+@media(max-width:900px){.workspace-layout{grid-template-columns:1fr}.workspace-rail{position:static}.workspace-rail .rail-list{display:grid;grid-template-columns:repeat(2,1fr);gap:6px}.rail-step{border:1px solid #edf0f3;border-radius:7px}.workspace-actions{grid-template-columns:1fr}}
+@media(max-width:600px){.workspace-hero{padding:22px 18px}.workspace-rail .rail-list{grid-template-columns:1fr}.workspace-main .panel{padding:17px!important}}
+</style>
+<style id="global-ux-v48">
+:root{--grps-navy:#003b70;--grps-blue:#0065a8;--grps-orange:#F58220;--grps-bg:#eef2f6;--grps-line:#d9e0e7;--grps-ink:#172333}
+html{scroll-behavior:smooth}
+body{padding-bottom:92px!important}
+a,button,input,select,textarea{font-family:inherit}
+button,.btn,a.btn{cursor:pointer}
+.floating-home-v48{
+ position:fixed;right:22px;bottom:22px;z-index:99999;width:58px;height:58px;border-radius:50%;
+ display:flex;align-items:center;justify-content:center;background:var(--grps-navy);color:#fff!important;
+ border:3px solid #fff;box-shadow:0 8px 22px rgba(0,0,0,.22);text-decoration:none!important;
+ font-size:1.45rem;font-weight:900;line-height:1
+}
+.floating-home-v48:hover{background:var(--grps-orange);color:#172333!important;transform:translateY(-1px)}
+.floating-home-v48:focus{outline:4px solid rgba(245,130,32,.35);outline-offset:2px}
+.topbar,.global-home-bar{display:none!important}
+main,.wrap,.container{scroll-margin-top:20px}
+.card,.panel,section,.tile{scroll-margin-top:18px}
+@media(max-width:700px){
+ body{padding-bottom:86px!important}
+ .floating-home-v48{right:16px;bottom:16px;width:54px;height:54px;font-size:1.35rem}
+}
+@media print{.floating-home-v48{display:none!important}}
+</style>
+<style id="home-nav-v49">
+.floating-home-v49{
+ position:fixed;right:22px;bottom:22px;z-index:999999;width:58px;height:58px;border-radius:50%;
+ display:flex;align-items:center;justify-content:center;background:#003b70;color:#fff!important;
+ border:3px solid #fff;box-shadow:0 8px 22px rgba(0,0,0,.22);text-decoration:none!important;
+ font-size:1.45rem;font-weight:900;line-height:1
+}
+.floating-home-v49:hover{background:#F58220;color:#172333!important;transform:translateY(-1px)}
+.floating-home-v49:focus{outline:4px solid rgba(245,130,32,.35);outline-offset:2px}
+@media(max-width:700px){.floating-home-v49{right:16px;bottom:16px;width:54px;height:54px}}
+@media print{.floating-home-v49{display:none!important}}
+</style>
+<style id="ux-cleanup-v66">
+/* v66: reduce visual noise and improve end-user scanning */
+details.v66-more{margin-top:14px;border:1px solid #d9e0e7;border-radius:8px;background:#fff}
+details.v66-more>summary{cursor:pointer;padding:12px 14px;font-weight:900;color:#003b70;list-style:none}
+details.v66-more>summary::-webkit-details-marker{display:none}
+details.v66-more>summary::after{content:"+";float:right;font-size:1.15rem}
+details.v66-more[open]>summary::after{content:"−"}
+details.v66-more .v66-more-body{padding:0 14px 14px}
+.v66-small-note{font-size:.74rem;color:#5d6b78}
+.v66-skip{position:absolute;left:-9999px;top:auto}
+.v66-skip:focus{left:12px;top:12px;z-index:999999;background:#fff;color:#003b70;padding:8px 10px;border:2px solid #F58220;border-radius:5px}
+@media(max-width:700px){
+  body{font-size:17px!important}
+  h1{font-size:2rem!important;line-height:1.08!important}
+  h2{font-size:1.3rem!important}
+  .card,.panel,.box,.item,.step{padding:14px!important}
+  input,select,textarea,button{min-height:44px}
+}
+</style>
+<style id="print-style-v69">@media print{#print-v69,#saveStatusV69,.v66-skip{display:none!important}body{background:#fff!important}}</style></head>
+<body><div id="print-v69" style="max-width:1320px;margin:12px auto;padding:0 18px;text-align:right"><button onclick="window.print()" style="background:#003b70;color:#fff;border:0;border-radius:6px;padding:9px 12px;font-weight:900;cursor:pointer">Print / Save PDF</button></div>
+<header><div class="page-purpose-v48" style="max-width:1240px;margin:12px auto;padding:0 18px">
+<div style="background:#fff;border:1px solid #d9e0e7;border-left:5px solid #F58220;border-radius:0 8px 8px 0;padding:12px 14px">
+<strong style="color:#003b70">Purchase Workspace:</strong>
+<span style="color:#5f6d7d;font-size:.84rem"> Complete the task here first. Use examples, guidance, and source links only when they help you finish the work.</span>
+</div></div><div class="wrap hero"><div class="eyebrow">Grand Rapids Public Schools · Title I Resource Center</div>
+<h1>Can I Buy This With Title I?</h1><p class="sub">A guided GRPS pre-check for allowability, program alignment, supplement-not-supplant, coding, approval, and documentation.</p></div></header>
+<div class="workspace-shell"><div class="workspace-hero">
+<div class="workspace-kicker">BUY SOMETHING</div><h1>Can Title I Pay for This?</h1><p>Move a proposed Title I purchase from idea to a documented decision. The workspace identifies what is ready, what needs review, and what must be resolved before funds are obligated.</p>
+<div class="workspace-outcome"><span>Allowability pre-check</span><span>Coding &amp; approval questions</span><span>Evidence plan</span></div></div></div><div class="workspace-layout"><aside class="workspace-rail"><h2>Your workflow</h2><div class="rail-list">
+<div class="rail-step"><span class="rail-num">1</span><div><b>Describe the purchase</b><small>What are you buying and why?</small></div></div><div class="rail-step"><span class="rail-num">2</span><div><b>Test the conditions</b><small>Need, supplemental nature, reasonableness, documentation.</small></div></div><div class="rail-step"><span class="rail-num">3</span><div><b>Resolve review items</b><small>Coding, prior approval, or allowability questions.</small></div></div><div class="rail-step"><span class="rail-num">4</span><div><b>Leave with a decision</b><small>Ready for formal review, needs review, or stop.</small></div></div>
+</div></aside><main><div class="wrap workspace-main"><div class="workspace-tip"><b>Design principle:</b> Start with the purchase—not the funding source. The purpose and identified need should drive whether Title I is an appropriate funding source.</div>
+<div class="stepper"><span class="step active">1 Purpose</span><span class="step">2 Allowability</span><span class="step">3 Supplanting</span><span class="step">4 Coding</span><span class="step">5 Approval</span><span class="step">6 Evidence</span></div>
+<div class="callout"><strong>Use this as a pre-check, not final approval.</strong> Current MDE guidance and GRPS approval procedures control. A “yes” here means “move forward for review,” not “purchase approved.”</div>
+<section class="panel"><h2>What are you trying to purchase?</h2><p>Choose the closest category first. The tool will use that selection to guide the rest of the pre-check.</p>
+<label>What are you purchasing? <strong style="color:#b95500">*</strong></label>
+<select id="itemType" onchange="itemChanged();validatePurchaseForm()">
+<option value="">Select a category</option>
+<option value="instructional">Instructional materials / curriculum resources</option>
+<option value="technology">Technology / software / digital tools</option>
+<option value="services">Tutoring / contracted instructional services</option>
+<option value="pd">Professional learning / conference / training</option>
+<option value="family">Family engagement materials / services</option>
+<option value="transport">Transportation / access support</option>
+<option value="food">Food / refreshments</option>
+<option value="incentive">Incentive / reward / prize</option>
+<option value="equipment">Equipment / furniture</option>
+<option value="travel">Travel / lodging / mileage</option>
+<option value="other">Other</option>
+</select>
+<div id="itemDetailWrap" style="display:none">
+<label>Tell us what you want to purchase</label>
+<input id="item" oninput="validatePurchaseForm()" placeholder="Example: decodable readers, tutoring services, family workshop materials" type="text"/>
+</div>
+<label>What is the primary Title I purpose? <strong style="color:#b95500">*</strong></label><select id="purpose" onchange="validatePurchaseForm()"><option value="">Select a purpose</option><option>Direct academic support</option><option>Professional learning</option><option>Family engagement linked to learning</option><option>Technology/equipment</option><option>Transportation / access support</option><option>School climate / well-rounded education</option><option>General operations / office use</option><option>Reward / incentive / gift</option></select>
+<input id="resp_need" type="hidden" value=""/>
+<input id="resp_supp" type="hidden" value=""/>
+<input id="resp_necessary" type="hidden" value=""/>
+<input id="resp_evidence" type="hidden" value=""/>
+<div class="precheck-intro">
+<h3>Answer each condition</h3>
+<p>Answer each question with <strong>Yes, No, or Not sure</strong>. Click a selected response again to clear it and change your answer. The tool will tell you whether the request is ready, needs review, or should stop.</p>
+</div>
+<div class="condition-card" data-condition="need">
+<div class="condition-copy">
+<strong>1. Is the need documented?</strong>
+<span>The purchase is connected to the school/district needs assessment, MICIP, or approved program plan.</span>
+</div>
+<div aria-label="Is the need documented?" class="response-group" role="group">
+<button class="response-btn" data-name="need" data-value="yes" onclick="toggleResponse('need','yes',this)" type="button">Yes</button>
+<button class="response-btn" data-name="need" data-value="no" onclick="toggleResponse('need','no',this)" type="button">No</button>
+<button class="response-btn" data-name="need" data-value="unsure" onclick="toggleResponse('need','unsure',this)" type="button">Not sure</button>
+</div>
+</div>
+<div class="condition-card" data-condition="supp">
+<div class="condition-copy">
+<strong>2. Is the cost supplemental?</strong>
+<span>It is not replacing a service the district is otherwise required to provide.</span>
+</div>
+<div aria-label="Is the cost supplemental?" class="response-group" role="group">
+<button class="response-btn" data-name="supp" data-value="yes" onclick="toggleResponse('supp','yes',this)" type="button">Yes</button>
+<button class="response-btn" data-name="supp" data-value="no" onclick="toggleResponse('supp','no',this)" type="button">No</button>
+<button class="response-btn" data-name="supp" data-value="unsure" onclick="toggleResponse('supp','unsure',this)" type="button">Not sure</button>
+</div>
+</div>
+<div class="condition-card" data-condition="necessary">
+<div class="condition-copy">
+<strong>3. Is the cost reasonable, necessary, and allocable?</strong>
+<span>The cost is directly connected to the intended Title I beneficiaries and the approved purpose.</span>
+</div>
+<div aria-label="Is the cost reasonable, necessary, and allocable?" class="response-group" role="group">
+<button class="response-btn" data-name="necessary" data-value="yes" onclick="toggleResponse('necessary','yes',this)" type="button">Yes</button>
+<button class="response-btn" data-name="necessary" data-value="no" onclick="toggleResponse('necessary','no',this)" type="button">No</button>
+<button class="response-btn" data-name="necessary" data-value="unsure" onclick="toggleResponse('necessary','unsure',this)" type="button">Not sure</button>
+</div>
+</div>
+<div class="condition-card" data-condition="evidence">
+<div class="condition-copy">
+<strong>4. Can the required documentation be retained?</strong>
+<span>Rationale, approval, invoice/receipt, coding, and implementation evidence can be maintained.</span>
+</div>
+<div aria-label="Can the required documentation be retained?" class="response-group" role="group">
+<button class="response-btn" data-name="evidence" data-value="yes" onclick="toggleResponse('evidence','yes',this)" type="button">Yes</button>
+<button class="response-btn" data-name="evidence" data-value="no" onclick="toggleResponse('evidence','no',this)" type="button">No</button>
+<button class="response-btn" data-name="evidence" data-value="unsure" onclick="toggleResponse('evidence','unsure',this)" type="button">Not sure</button>
+</div>
+</div>
+<div aria-live="polite" class="result show caution" id="requiredStatus"><strong>Complete all required responses to see the pre-check result.</strong></div>
+<button aria-disabled="true" class="btn no-print" disabled="" id="purchaseButton" onclick="checkPurchase()">See pre-check result</button>
+<div class="result" id="purchaseResult"></div></section><section id="use-when-v65" style="max-width:1320px;margin:12px auto;padding:0 18px"><div style="display:flex;gap:10px;align-items:flex-start;background:#f7fafc;border:1px solid #d8e0e7;border-radius:8px;padding:11px 13px"><span style="background:#003b70;color:#fff;font-size:.66rem;font-weight:900;padding:5px 7px;border-radius:5px;white-space:nowrap">USE THIS WHEN</span><span style="color:#526579;font-size:.78rem">Use this before committing Title I funds for a purchase, service, travel, food, incentive, equipment, or other cost.</span></div></section><style id="journey-v67">
+.journey-v67{max-width:1320px;margin:12px auto;padding:0 18px}.journey-v67 .bar{background:#fff;border:1px solid #d8e0e7;border-radius:9px;padding:12px 14px}
+.journey-v67 .title{font-size:.68rem;font-weight:900;color:#003b70;text-transform:uppercase;letter-spacing:.06em;margin-bottom:8px}
+.journey-v67 .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:7px}.journey-v67 .step{background:#f7fafc;border-radius:6px;padding:8px 9px;font-size:.7rem;color:#526579}
+.journey-v67 .step b{display:inline-flex;width:23px;height:23px;border-radius:50%;background:#003b70;color:#fff;align-items:center;justify-content:center;margin-right:5px}
+@media(max-width:760px){.journey-v67 .steps{grid-template-columns:1fr 1fr}}@media(max-width:480px){.journey-v67 .steps{grid-template-columns:1fr}}
+</style><section class="journey-v67"><div class="bar"><div class="title">How this tool works</div><div class="steps"><div class="step"><b>1</b>Identify the need</div><div class="step"><b>2</b>Check Title I fit</div><div class="step"><b>3</b>Resolve concerns</div><div class="step"><b>4</b>Submit with evidence</div></div></div></section><section id="orientation-v64" style="max-width:1320px;margin:14px auto;padding:0 18px"><div style="background:#fff7ef;border-left:6px solid #F58220;border-radius:0 9px 9px 0;padding:14px 16px"><strong style="color:#003b70">Before you start:</strong> <span style="color:#526579">Answer a short set of questions about the need, purpose, and purchase. At the end, you’ll know whether the request is ready, needs more information, or has a concern to resolve.</span></div></section>
+<section class="panel"><h2>Before submission</h2><div class="tablewrap"><table><tr><th>Check</th><th>Question to answer</th></tr>
+<tr><td>Allowability</td><td>Does current Title I/MDE guidance permit this type of cost?</td></tr>
+<tr><td>Program alignment</td><td>What identified need, strategy, activity, or family-engagement objective does it support?</td></tr>
+<tr><td>Supplement, not supplant</td><td>At the district level, would Title I replace State/local funds or a required service?</td></tr>
+<tr><td>Function/object code</td><td>Is the proposed coding consistent with current MDE function/object guidance?</td></tr>
+<tr><td>Prior approval</td><td>Does this cost require GRPS or MDE prior approval before obligation?</td></tr>
+<tr><td>Evidence</td><td>What will demonstrate that the purchase was used for the approved Title I purpose?</td></tr></table></div>
+<p class="source">Current reference: <a href="https://www.michigan.gov/mde/services/school-performance-supports/educational-supports/state-and-federal-programs" target="_blank">MDE State &amp; Federal Programs</a> — use the current Allowable Use FAQ and Function/Object Code FAQ.</p></section>
+</div></main></div>
+<script>
+const purchaseRequirementLabels = {
+  itemType: 'Choose a purchase category.',
+  item: 'Describe the specific item or service.',
+  purpose: 'Select the primary Title I purpose.',
+  need: 'Answer whether the need is documented.',
+  supp: 'Answer whether the cost is supplemental.',
+  necessary: 'Answer whether the cost is reasonable, necessary, and allocable.',
+  evidence: 'Answer whether required documentation can be retained.'
+};
+const purchaseConditionText = {
+  need: 'The need is not documented in the needs assessment, MICIP, or approved program plan.',
+  supp: 'The cost may be replacing a service the district is otherwise required to provide.',
+  necessary: 'The cost is not confirmed as reasonable, necessary, allocable, and connected to intended beneficiaries.',
+  evidence: 'The required rationale, approval, fiscal, coding, or implementation evidence cannot currently be retained.'
+};
+function responseValue(name){ return document.getElementById('resp_'+name)?.value || ''; }
+function toggleResponse(name,value,button){
+  const state=document.getElementById('resp_'+name);
+  const group=button.closest('.response-group');
+  const isActive=button.classList.contains('active');
+
+  group.querySelectorAll('.response-btn').forEach(b=>b.classList.remove('active'));
+
+  if(isActive){
+    state.value='';
+  }else{
+    state.value=value;
+    button.classList.add('active');
+  }
+
+  document.getElementById('purchaseResult').className='result';
+  document.getElementById('purchaseResult').innerHTML='';
+  validatePurchaseForm();
+}
+function getPurchaseMissing(){
+  const missing=[], type=document.getElementById('itemType').value, detail=(document.getElementById('item')?.value||'').trim(), purpose=document.getElementById('purpose').value;
+  if(!type) missing.push('itemType');
+  if(type && !detail) missing.push('item');
+  if(!purpose) missing.push('purpose');
+  ['need','supp','necessary','evidence'].forEach(name=>{ if(!responseValue(name)) missing.push(name); });
+  return missing;
+}
+function paintConditionCards(){
+  ['need','supp','necessary','evidence'].forEach(name=>{
+    const card=document.querySelector('.condition-card[data-condition="'+name+'"]'); if(!card) return;
+    card.classList.remove('is-yes','is-no','is-unsure');
+    const v=responseValue(name); if(v) card.classList.add('is-'+v);
+  });
+}
+function validatePurchaseForm(){
+  const missing=getPurchaseMissing(), btn=document.getElementById('purchaseButton'), status=document.getElementById('requiredStatus');
+  paintConditionCards();
+  btn.disabled=missing.length>0; btn.setAttribute('aria-disabled',missing.length?'true':'false');
+  if(missing.length){
+    status.className='result show caution';
+    status.innerHTML='<strong>'+missing.length+' required response'+(missing.length===1?' is':'s are')+' still incomplete.</strong><ul class="outcome-list">'+missing.map(id=>'<li>'+purchaseRequirementLabels[id]+'</li>').join('')+'</ul>';
+  }else{
+    status.className='result show yes';
+    status.innerHTML='<strong>All questions are answered.</strong> Select “See pre-check result” to view the recommendation.';
+  }
+}
+function itemChanged(){
+  const t=document.getElementById('itemType').value, wrap=document.getElementById('itemDetailWrap'), purpose=document.getElementById('purpose');
+  wrap.style.display=t?'block':'none';
+  const suggestion={instructional:'Direct academic support',technology:'Direct academic support',services:'Direct academic support',pd:'Professional learning',family:'Family engagement linked to learning',transport:'Transportation / access support',food:'Family engagement linked to learning',incentive:'Reward / incentive / gift',equipment:'Technology/equipment',travel:'Professional learning'}[t];
+  if(suggestion) purpose.value=suggestion;
+  if(!t && document.getElementById('item')) document.getElementById('item').value='';
+  document.getElementById('purchaseResult').className='result'; document.getElementById('purchaseResult').innerHTML=''; validatePurchaseForm();
+}
+function checkPurchase(){
+  const missing=getPurchaseMissing(), r=document.getElementById('purchaseResult');
+  if(missing.length){ validatePurchaseForm(); r.className='result show no'; r.innerHTML='<strong>Pre-check cannot run yet.</strong> Complete every required response listed above.'; return; }
+  const t=document.getElementById('itemType').value, p=document.getElementById('purpose').value;
+  const responses={need:responseValue('need'),supp:responseValue('supp'),necessary:responseValue('necessary'),evidence:responseValue('evidence')};
+  const noItems=Object.entries(responses).filter(([k,v])=>v==='no').map(([k])=>k);
+  const unsureItems=Object.entries(responses).filter(([k,v])=>v==='unsure').map(([k])=>k);
+  if(t==='incentive'){ r.className='result show no'; r.innerHTML='<strong>Stop and obtain additional review.</strong> Incentives, rewards, prizes, and similar items are high-risk. Check the current MDE Allowable Use FAQ and obtain GRPS review before committing funds.'; return; }
+  if(p==='General operations / office use'){ r.className='result show no'; r.innerHTML='<strong>Likely not appropriate for Title I.</strong> General operating costs require a specific Title I program connection and additional review.'; return; }
+  if(noItems.length){ r.className='result show no'; r.innerHTML='<strong>Not ready to move forward.</strong><ul class="outcome-list">'+noItems.map(k=>'<li>'+purchaseConditionText[k]+'</li>').join('')+'</ul><strong>Next step:</strong> Resolve the blocker(s) or consult Title I/finance staff before requesting approval.'; return; }
+  if(unsureItems.length){ r.className='result show caution'; r.innerHTML='<strong>Needs additional review.</strong><ul class="outcome-list">'+unsureItems.map(k=>'<li>'+purchaseRequirementLabels[k].replace('Answer whether ','Clarify whether ')+'</li>').join('')+'</ul><strong>Next step:</strong> Resolve the uncertain item(s) before submitting the request for approval.'; return; }
+  if(t==='food'){ r.className='result show caution'; r.innerHTML='<strong>Basic conditions are met, but food/refreshments need an additional review.</strong> Confirm the cost is integral to an allowable Title I activity and consistent with current MDE guidance and GRPS procedures.'; return; }
+  r.className='result show yes'; r.innerHTML='<strong>Ready for formal review.</strong> All four core conditions were answered “Yes.” Submit the rationale, coding, cost, and supporting documentation through the GRPS approval process before obligating funds.';
+}
+validatePurchaseForm();
+</script>
+<section style="max-width:1320px;margin:14px auto;padding:0 18px"><div style="background:#f8fafc;border:1px solid #d8e0e7;border-radius:8px;padding:13px"><strong style="color:#003b70">Need more depth?</strong> <span style="color:#526173">Open the curated Fiscal, Allowability &amp; Coding resource pack for professional learning, examples, and implementation references.</span> <a href="curated_resource_packs.html" style="font-weight:900;color:#003b70">Open Deeper Resources →</a></div></section>
+<style id="resource-shelf-v58">
+.resource-shelf-v58{max-width:1320px;margin:16px auto;padding:0 18px}
+.resource-shelf-v58 .shelf-wrap{background:#fff;border:1px solid #d8e0e7;border-radius:10px;padding:16px}
+.resource-shelf-v58 h2{margin:0 0 5px;color:#003b70;font-size:1.15rem}
+.resource-shelf-v58 .shelf-sub{margin:0 0 12px;color:#5d6b78;font-size:.82rem}
+.resource-shelf-v58 .shelf-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}
+.resource-shelf-v58 .shelf-card{border:1px solid #d8e0e7;border-radius:8px;padding:12px;background:#f9fbfc}
+.resource-shelf-v58 .shelf-type{font-size:.63rem;font-weight:900;letter-spacing:.06em;text-transform:uppercase;color:#b54f00}
+.resource-shelf-v58 h3{margin:3px 0 5px;color:#003b70;font-size:.92rem}
+.resource-shelf-v58 p{margin:0 0 7px;color:#5d6b78;font-size:.72rem}
+.resource-shelf-v58 a{font-weight:900;color:#003b70;text-decoration:none;font-size:.74rem}
+.resource-shelf-v58 .shelf-footer{margin-top:10px;padding-top:9px;border-top:1px solid #e3e8ed;display:flex;justify-content:space-between;gap:8px;align-items:center}
+.resource-shelf-v58 .shelf-footer span{font-size:.69rem;color:#697684}
+@media(max-width:850px){.resource-shelf-v58 .shelf-grid{grid-template-columns:1fr}}
+</style>
+<details class="v66-more"><summary>Need examples, guidance, or deeper resources?</summary><div class="v66-more-body"><section class="resource-shelf-v58"><div class="shelf-wrap"><h2>Resources for this work</h2><p class="shelf-sub">Only the most relevant resources are surfaced here. Use the workspace first; open a source, example, or learning resource when it helps you complete the task.</p><div class="shelf-grid"><div class="shelf-card"><div class="shelf-type">CURRENT OPERATING TOOL</div><h3>Title I Spending &amp; Coding</h3><p>Move from allowability to purpose-based coding and documentation.</p><a href="spending_hub.html">Open →</a></div><div class="shelf-card"><div class="shelf-type">EXAMPLE</div><h3>Purchase Rationales</h3><p>See examples of stronger written rationales before submitting a request.</p><a href="example_purchase_rationales.html">Open →</a></div><div class="shelf-card"><div class="shelf-type">PROFESSIONAL LEARNING</div><h3>Fiscal Monitoring Resources</h3><p>Use for deeper understanding of fiscal controls and common issues.</p><a href="curated_resource_packs.html#fiscal-coding">Open →</a></div></div><div class="shelf-footer"><span>Need something else?</span><a href="resource_finder.html">Open Find the Right Resource →</a></div></div></section></div></details><section id="common-mistake-v65" style="max-width:1320px;margin:12px auto;padding:0 18px"><div style="background:#fff;border:1px solid #d8e0e7;border-left:6px solid #F58220;border-radius:0 8px 8px 0;padding:12px 14px"><strong style="color:#003b70">Common mistake:</strong> <span style="color:#526579">Do not start with the item you want to buy. Start with the identified need and the Title I purpose the cost is intended to support.</span></div></section><section id="done-when-v68" style="max-width:1320px;margin:12px auto;padding:0 18px"><div style="background:#f4f8f5;border:1px solid #cad9ce;border-left:6px solid #3f6f4e;border-radius:0 8px 8px 0;padding:12px 14px"><strong style="color:#214c30">You are done when:</strong> <span style="color:#526579">You can explain the identified need, Title I purpose, why the cost is reasonable and necessary, what approval is required, and what documentation will be retained.</span></div></section><section id="what-next-v67" style="max-width:1320px;margin:14px auto;padding:0 18px"><div style="background:#003b70;color:#fff;border-radius:9px;padding:14px 16px"><strong>What happens next?</strong> <span style="color:#e7f0f6">If the request is ready, move it through the normal GRPS approval/purchasing process and retain the rationale and supporting documentation.</span></div></section><div id="saveStatusV69" style="position:fixed;left:14px;bottom:14px;z-index:99999;background:#fff;border:1px solid #cbd5de;border-radius:999px;padding:6px 9px;font:700 12px Arial;color:#526579;box-shadow:0 4px 13px rgba(0,0,0,.10)">Changes save in this browser</div><script id="generic-save-v69">
+(function(){
+const KEY="grps_title_i_purchase";
+function collect(){const data={updatedAt:new Date().toLocaleString(),fields:{}};document.querySelectorAll("input,select,textarea").forEach(function(el,i){if(["button","submit","file"].includes(el.type))return;const k=el.name||el.id||("field_"+i);data.fields[k]=(el.type==="checkbox"||el.type==="radio")?el.checked:el.value;});return data;}
+function restore(){const raw=localStorage.getItem(KEY);if(!raw)return;let data;try{data=JSON.parse(raw)}catch(e){return};const f=data.fields||{};document.querySelectorAll("input,select,textarea").forEach(function(el,i){const k=el.name||el.id||("field_"+i);if(!(k in f))return;if(el.type==="checkbox"||el.type==="radio")el.checked=!!f[k];else if(!el.value)el.value=f[k];});}
+function save(){localStorage.setItem(KEY,JSON.stringify(collect()));const x=document.getElementById("saveStatusV69");if(x)x.textContent="Saved "+new Date().toLocaleTimeString([],{hour:"numeric",minute:"2-digit"});}
+document.addEventListener("input",function(){clearTimeout(window.__saveV69);window.__saveV69=setTimeout(save,350);});
+document.addEventListener("change",save);window.addEventListener("DOMContentLoaded",restore);
+})();</script><section id="person-help-v69" style="max-width:1320px;margin:12px auto;padding:0 18px"><div style="background:#fff;border:1px solid #d8e0e7;border-radius:8px;padding:12px 14px"><strong style="color:#003b70">Still unsure?</strong> <span style="color:#526579">If the request is still unclear after using this tool, contact State & Federal Programs before funds are committed.</span> <a href="help_contacts.html" style="font-weight:900;color:#003b70">Get help →</a></div></section><section style="max-width:1320px;margin:12px auto;padding:0 18px"><details class="v66-more" id="scenario-v69"><summary>See 3 quick purchase examples</summary><div class="v66-more-body"><p><strong>Reading software:</strong> Potentially allowable when tied to an identified instructional need, included in the Title I program, reasonable in cost, and properly approved/documented.</p><p><strong>Family-night door prizes:</strong> Do not assume they are allowable because the event is Title I. The incentive itself needs a defensible program purpose and current guidance should be checked.</p><p><strong>Conference travel:</strong> Start with the role of the attendee and how the learning supports the Title I-funded program—not simply that the conference is educational.</p></div></details></section><div id="record-disclosure-v70" style="max-width:1320px;margin:8px auto;padding:0 18px"><div style="font-size:.68rem;color:#5d6b78;background:#f7fafc;border:1px solid #d8e0e7;border-radius:7px;padding:8px 10px"><strong>Saving note:</strong> Work on this page may be saved in this browser for convenience. It is not the district system of record. Retain required documentation in the appropriate GRPS location.</div></div></body></html>

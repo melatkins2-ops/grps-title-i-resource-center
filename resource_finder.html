@@ -1,0 +1,76 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Title I Resource Finder</title><style>
+:root{--navy:#003b70;--orange:#F58220;--ink:#172333;--muted:#647184;--line:#d8e0e7;--bg:#eef2f6}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);font-family:Arial,Helvetica,sans-serif;color:var(--ink);font-size:18px;line-height:1.45;padding-bottom:90px}
+.hero{background:var(--navy);color:#fff;border-bottom:6px solid var(--orange);padding:30px max(20px,calc((100vw - 1180px)/2))}
+.hero h1{font-size:clamp(2rem,4vw,3.15rem);margin:5px 0}.hero p{max-width:900px;color:#e7f0f6}.wrap{max-width:1180px;margin:18px auto;padding:0 18px}
+.panel{background:#fff;border:1px solid var(--line);border-radius:10px;padding:18px;margin-bottom:14px}.panel h2{margin:0 0 8px;color:var(--navy)}
+.choices{display:grid;grid-template-columns:repeat(2,1fr);gap:9px}.choice{border:1px solid #c8d3dc;background:#fff;border-radius:8px;padding:14px;text-align:left;cursor:pointer;font:inherit}.choice b{display:block;color:var(--navy);font-size:.95rem}.choice span{display:block;color:var(--muted);font-size:.76rem;margin-top:3px}.choice.selected{border:3px solid var(--orange);padding:12px;background:#fffaf5}
+.result{display:none;background:#fff;border:1px solid var(--line);border-top:6px solid var(--orange);border-radius:10px;padding:18px}.result h2{color:var(--navy);margin:0 0 8px}.route{display:grid;grid-template-columns:1fr 1fr 1fr;gap:9px}.route>div{border:1px solid var(--line);border-radius:8px;padding:13px}.route b{display:block;color:var(--navy);margin-bottom:5px}.route p{font-size:.76rem;color:var(--muted)}.btn{display:inline-block;background:var(--navy);color:#fff!important;text-decoration:none;font-weight:900;padding:9px 12px;border-radius:6px;margin-top:6px}
+.note{border-left:6px solid var(--orange);background:#fff7ef;padding:13px;border-radius:0 8px 8px 0;margin-top:10px}
+@media(max-width:800px){.choices,.route{grid-template-columns:1fr}}
+</style>
+<style id="ux-cleanup-v66">
+/* v66: reduce visual noise and improve end-user scanning */
+details.v66-more{margin-top:14px;border:1px solid #d9e0e7;border-radius:8px;background:#fff}
+details.v66-more>summary{cursor:pointer;padding:12px 14px;font-weight:900;color:#003b70;list-style:none}
+details.v66-more>summary::-webkit-details-marker{display:none}
+details.v66-more>summary::after{content:"+";float:right;font-size:1.15rem}
+details.v66-more[open]>summary::after{content:"−"}
+details.v66-more .v66-more-body{padding:0 14px 14px}
+.v66-small-note{font-size:.74rem;color:#5d6b78}
+.v66-skip{position:absolute;left:-9999px;top:auto}
+.v66-skip:focus{left:12px;top:12px;z-index:999999;background:#fff;color:#003b70;padding:8px 10px;border:2px solid #F58220;border-radius:5px}
+@media(max-width:700px){
+  body{font-size:17px!important}
+  h1{font-size:2rem!important;line-height:1.08!important}
+  h2{font-size:1.3rem!important}
+  .card,.panel,.box,.item,.step{padding:14px!important}
+  input,select,textarea,button{min-height:44px}
+}
+</style>
+</head><body>
+<section class="hero"><div style="font-size:.72rem;font-weight:900;letter-spacing:.12em;color:#ffd4b3">GRPS TITLE I • GUIDED RESOURCE FINDER</div><h1>Find the right resource</h1><p>Answer two quick questions. The finder will tell you where to start, what to use next, and when a deeper example or professional-learning resource is worth opening.</p></section><section id="synonym-help-v69" style="max-width:1180px;margin:10px auto;padding:0 18px"><div style="background:#f7fafc;border:1px solid #d8e0e7;border-radius:8px;padding:11px 13px;font-size:.76rem;color:#526579"><strong style="color:#003b70">You can search in everyday language.</strong> Try words such as <em>food, gift card, family night, meeting, tutor, teacher salary, time sheet, evidence, review, private school, transportation, software, conference</em>.</div></section><section id="use-when-v65" style="max-width:1320px;margin:12px auto;padding:0 18px"><div style="display:flex;gap:10px;align-items:flex-start;background:#f7fafc;border:1px solid #d8e0e7;border-radius:8px;padding:11px 13px"><span style="background:#003b70;color:#fff;font-size:.66rem;font-weight:900;padding:5px 7px;border-radius:5px;white-space:nowrap">USE THIS WHEN</span><span style="color:#526579;font-size:.78rem">Use this when you know the question but do not know which resource contains the answer.</span></div></section>
+<div class="wrap">
+<section class="panel"><h2>1. What do you need right now?</h2><div class="choices" id="needChoices">
+<button class="choice" data-v="do"><b>Complete the work</b><span>I need to make a decision, plan something, document it, or move a task forward.</span></button>
+<button class="choice" data-v="requirements"><b>Understand the requirements</b><span>I need to know what is expected before I act.</span></button>
+<button class="choice" data-v="example"><b>See a strong example</b><span>I understand the requirement but need to see what good implementation can look like.</span></button>
+<button class="choice" data-v="learn"><b>Learn or teach the content</b><span>I need professional learning, onboarding, or a resource for a team.</span></button>
+</div></section>
+
+<section class="panel"><h2>2. Which area?</h2><div class="choices" id="areaChoices">
+<button class="choice" data-v="spending"><b>Spending / allowability / coding</b><span>Purchases, contracts, food, incentives, coding, budget changes.</span></button>
+<button class="choice" data-v="family"><b>Family engagement / Annual Title I Meeting</b><span>Parent meetings, compacts, engagement plans, two-way communication.</span></button>
+<button class="choice" data-v="staffing"><b>Staffing / time & effort</b><span>Funded roles, duties, schedules, activity/time documentation.</span></button>
+<button class="choice" data-v="monitoring"><b>Monitoring / evidence / written processes</b><span>Implementation evidence, review readiness, risk, documentation systems.</span></button>
+<button class="choice" data-v="ci"><b>Continuous improvement / MICIP / evaluation</b><span>Needs, strategies, implementation, team routines, annual evaluation.</span></button>
+<button class="choice" data-v="private"><b>Private school equitable services</b><span>Consultation, data, services, purchases, participation, evaluation.</span></button>
+</div></section>
+
+<section class="result" id="finderResult"><div style="font-size:.72rem;font-weight:900;text-transform:uppercase;color:#b54f00">Your pathway</div><h2 id="resultTitle"></h2><p id="resultIntro"></p><div class="route" id="routeCards"></div><div class="note" id="resultNote"></div></section>
+</div>
+<script>
+let need=null,area=null;
+const map={
+spending:{workspace:["Can Title I Pay for This?","guided_purchase.html","Complete the allowability/approval decision first."],require:["Title I Spending & Coding","spending_hub.html","Use current GRPS/MDE guidance for purpose, coding, and documentation."],pack:["Fiscal, Allowability & Coding Resources","curated_resource_packs.html#fiscal-coding","Open professional learning and deeper references only as needed."]},
+family:{workspace:["Plan a Family Engagement Activity","guided_family_engagement.html","Design the activity around a scholar-learning need, caregiver outcome, access, evidence, and follow-up."],require:["Family Engagement Hub","family_engagement_hub.html","Review the operating expectations and stronger design examples."],pack:["Family Engagement & Annual Meeting Resources","curated_resource_packs.html#family-annual","Use examples and family-voice resources to deepen the work."]},
+staffing:{workspace:["Title I-Funded Staff","staffing_documentation_hub.html","Align the funded role, actual work, schedule, service, and documentation."],require:["Title I-Funded Staff","staffing_documentation_hub.html","Use the role-alignment guidance and current requirements."],pack:["Staffing & Time/Effort Resources","curated_resource_packs.html#staffing-time","Use training and resource dashboards for deeper implementation support."]},
+monitoring:{workspace:["Get Ready for a Title I Review","guided_onsite_review.html","Identify open gaps, evidence locations, owners, and corrective actions."],require:["Evidence Builder","guided_evidence.html","Build the complete evidence story from need through adjustment."],pack:["Monitoring & Written Process Resources","curated_resource_packs.html#monitoring-readiness","Use common findings and implementation examples to strengthen systems."]},
+ci:{workspace:["Monthly Title I Review","continuous_improvement_action_center.html","Run the implementation cycle and make decisions that carry into annual evaluation."],require:["Monthly Title I Review","continuous_improvement_action_center.html","Connect Title I work to needs, strategy, implementation, monitoring, decision, and evaluation."],pack:["Continuous Improvement & Program Evaluation Resources","curated_resource_packs.html#ci-evaluation","Use MICIP, PLC, and evaluation resources for deeper team learning."]},
+private:{workspace:["Private School Title I","private_school_hub.html","Keep consultation, data, services, purchases, evidence, and evaluation connected."],require:["Plan a Private School Consultation","guided_private_consultation.html","Use current GRPS requirements and consultation guidance."],pack:["Private School Equitable Services Resources","curated_resource_packs.html#private-school","Use MDE professional learning for deeper legal/operational context."]}
+};
+function route(file){let p=file.split("#"),f=p[0],a=p[1]||"";return "#page-"+f.replace(/[^A-Za-z0-9_-]+/g,"-")+(a?"|"+a:"");}
+document.querySelectorAll("#needChoices .choice").forEach(b=>b.onclick=()=>{need=b.dataset.v;document.querySelectorAll("#needChoices .choice").forEach(x=>x.classList.toggle("selected",x===b));render();});
+document.querySelectorAll("#areaChoices .choice").forEach(b=>b.onclick=()=>{area=b.dataset.v;document.querySelectorAll("#areaChoices .choice").forEach(x=>x.classList.toggle("selected",x===b));render();});
+function render(){
+ if(!need||!area)return;
+ const x=map[area], r=document.getElementById("finderResult");r.style.display="block";
+ const mode={do:"Complete the work",requirements:"Understand the requirements",example:"See a strong example",learn:"Learn or teach the content"}[need];
+ resultTitle.textContent=mode;
+ resultIntro.textContent="Use this sequence so the source material supports the work instead of becoming another pile of documents.";
+ let order=need==="do"?["workspace","require","pack"]:need==="requirements"?["require","workspace","pack"]:need==="example"?["workspace","pack","require"]:["pack","require","workspace"];
+ routeCards.innerHTML=order.map((k,i)=>{const v=x[k];return `<div><b>${i+1}. ${v[0]}</b><p>${v[2]}</p><a class="btn" href="${route(v[1])}" target="_parent">Open →</a></div>`}).join("");
+ resultNote.innerHTML="<strong>Source hierarchy:</strong> current federal/MDE guidance and current-year GRPS procedures control. Examples and professional-learning resources help with implementation but do not replace current requirements.";
+ r.scrollIntoView({behavior:"smooth",block:"start"});
+}
+</script></body></html>
