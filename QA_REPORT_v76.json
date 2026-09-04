@@ -1,0 +1,32 @@
+{
+  "summary": {
+    "pages_scanned": 64,
+    "issues_after_fix": {
+      "missing_local_targets": 0,
+      "stale_single_file_hash_routes": 0,
+      "empty_or_placeholder_links": 0,
+      "duplicate_ids": 0,
+      "missing_viewport_meta": 0,
+      "missing_title": 0,
+      "missing_anchor_targets": 0,
+      "pages_without_home": 0,
+      "pages_without_quick_help": 0,
+      "pages_without_my_work": 0
+    },
+    "homepage_description_corrections": 2,
+    "viewport_pages_fixed": 2,
+    "status": "PASS"
+  },
+  "details": {
+    "missing_local_targets": [],
+    "stale_single_file_hash_routes": [],
+    "empty_or_placeholder_links": [],
+    "duplicate_ids": [],
+    "missing_viewport_meta": [],
+    "missing_title": [],
+    "missing_anchor_targets": [],
+    "pages_without_home": [],
+    "pages_without_quick_help": [],
+    "pages_without_my_work": []
+  }
+}
