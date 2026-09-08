@@ -36,9 +36,9 @@ a:focus-visible,button:focus-visible{outline:4px solid #ffbb66;outline-offset:3p
 .btn{display:inline-block;background:var(--orange);color:#fff;padding:13px 19px;border-radius:9px;font-weight:900}
 .btn.secondary{background:#fff;color:var(--navy)}
 .hero-photo{position:relative;overflow:hidden;min-height:390px;background:#dcebf2}
-.hero-photo img{width:100%;height:100%;object-fit:cover;display:block}
+.hero-photo img{width:100%;height:100%;object-fit:cover;object-position:center 38%;display:block}
 .hero-photo:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(6,69,121,.25),rgba(6,69,121,0) 50%)}
-.promise{position:absolute;right:24px;top:34px;z-index:2;background:#fff;color:var(--navy);padding:21px 24px;border-radius:20px;box-shadow:0 12px 30px rgba(0,0,0,.18);font-size:27px;line-height:1.1;font-weight:900;transform:rotate(-2deg)}
+.promise{position:absolute;right:22px;bottom:22px;z-index:2;background:rgba(255,255,255,.96);color:var(--navy);padding:16px 20px;border-radius:16px;box-shadow:0 10px 26px rgba(0,0,0,.16);font-size:22px;line-height:1.12;font-weight:900;transform:none;max-width:260px}
 .promise b{color:var(--orange)}
 .section{max-width:1440px;margin:auto;padding:34px 28px}
 .section h2{margin:0 0 6px;font-size:31px}
@@ -59,6 +59,7 @@ a:focus-visible,button:focus-visible{outline:4px solid #ffbb66;outline-offset:3p
 .task-inner h2{margin:0 0 5px;font-size:29px}
 .task-link{border-left:1px solid rgba(255,255,255,.35);padding-left:18px;font-weight:900}
 .task-link span{display:block;margin-top:4px;font-size:13px;font-weight:400;color:#d6e7f4}
+.back-float{position:fixed;left:22px;bottom:22px;z-index:30;background:#fff;color:var(--navy);border:2px solid var(--navy);border-radius:28px;padding:12px 18px;font-weight:900;box-shadow:0 8px 24px rgba(0,0,0,.16)}
 .help-float{position:fixed;right:22px;bottom:22px;z-index:30;background:var(--orange);color:#fff;border-radius:28px;padding:14px 20px;font-weight:900;box-shadow:0 8px 24px rgba(0,0,0,.22)}
 @media(max-width:1100px){
   .search-pill,.translate{display:none} .brand{min-width:0}
@@ -148,4 +149,4 @@ a:focus-visible,button:focus-visible{outline:4px solid #ffbb66;outline-offset:3p
   <a class="task-link" href="quick_help.html">Quick Help<span>Find an answer when you are not sure where to begin.</span></a>
 </div></section>
 <a class="help-float" href="quick_help.html">Need Help? →</a>
-</body></html>
+<a class="back-float" href="javascript:history.back()" aria-label="Go back">← Back</a></body></html>
