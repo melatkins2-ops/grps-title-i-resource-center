@@ -1,0 +1,37 @@
+{
+  "summary": {
+    "release": "v80 GitHub-safe Parent University redesign",
+    "pages_scanned": 64,
+    "video_externalized": true,
+    "video_mb": 7.89,
+    "what_is_title_i_html_mb": 0.02,
+    "largest_upload_file_mb": 7.89,
+    "issues": {
+      "missing_local_targets": 0,
+      "stale_routes": 0,
+      "empty_links": 0,
+      "missing_anchors": 0,
+      "duplicate_ids": 0,
+      "missing_viewport": 0,
+      "missing_title": 0,
+      "without_home": 0,
+      "without_back": 0,
+      "without_resources": 0,
+      "js_html_missing": 0
+    },
+    "status": "PASS"
+  },
+  "details": {
+    "missing_local_targets": [],
+    "stale_routes": [],
+    "empty_links": [],
+    "missing_anchors": [],
+    "duplicate_ids": [],
+    "missing_viewport": [],
+    "missing_title": [],
+    "without_home": [],
+    "without_back": [],
+    "without_resources": [],
+    "js_html_missing": []
+  }
+}
