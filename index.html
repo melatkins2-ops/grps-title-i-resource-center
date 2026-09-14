@@ -1310,8 +1310,23 @@ body.non-title-i .approved-step.step2,body.non-title-i .approved-step.step3,body
 
 /* v76: make the four data types explicit without adding visual overload */
 .sample-four-data-compact{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:18px 0}.sample-four-data-compact>div{border:1px solid #cfe0ef;border-radius:14px;padding:14px 16px;background:#f8fbfe;display:flex;flex-direction:column;gap:5px}.sample-four-data-compact b{color:#123e78;font-size:.98rem}.sample-four-data-compact span{color:#355d86;line-height:1.4}.sample-synthesis-callout{margin:14px 0;padding:16px 18px;border-left:5px solid #f28c28;background:#fff8f0;border-radius:12px;display:flex;flex-direction:column;gap:5px}.sample-synthesis-callout b{color:#123e78}.sample-data-link{display:inline-block;margin:0 0 12px;padding:7px 10px;border-radius:999px;background:#eef5fb;color:#355d86;font-size:.9rem;line-height:1.25}.sample-data-link b{color:#123e78}@media(max-width:760px){.sample-four-data-compact{grid-template-columns:1fr}.sample-data-link{border-radius:12px}}
+
+/* v78 — eliminate floating Home overlap on every view.
+   Home lives in the sticky header; Back remains bottom-left. */
+#persistentHomeButton{display:none!important}
+@media(max-width:1050px){
+  .approved-nav{display:flex!important;margin-left:auto!important}
+  .approved-nav button{display:none!important}
+  .approved-nav button:first-child{display:inline-flex!important;align-items:center!important;gap:5px!important;border:1px solid #cfe0ee!important;border-radius:999px!important;padding:8px 12px!important;background:#fff!important}
+}
+@media(max-width:680px){
+  .approved-header{align-items:center!important}
+  .approved-nav{order:2!important}
+  .approved-school-selector{order:3!important}
+}
 </style>
 
+<!-- v78: Home moved into sticky header; floating Home disabled globally to prevent overlap with page controls. -->
 </head>
 <body>
 <button id="persistentHomeButton" class="persistent-home-button" type="button" onclick="show('home')" aria-label="Return to Home" title="Home">
@@ -3214,24 +3229,7 @@ function toggleFullSample(){
 
 
 
-<script>
-/* v77 runtime guard: never allow Back and Home to occupy the same screen space. */
-function separateFloatingNavControls(){
-  const back=document.getElementById('globalBackBtn');
-  const home=document.getElementById('persistentHomeButton');
-  if(!back||!home)return;
-  back.style.setProperty('left', window.innerWidth<=680?'10px':'16px','important');
-  back.style.setProperty('right','auto','important');
-  back.style.setProperty('bottom',window.innerWidth<=680?'10px':'16px','important');
-  back.style.setProperty('transform','none','important');
-  home.style.setProperty('right',window.innerWidth<=680?'10px':'16px','important');
-  home.style.setProperty('left','auto','important');
-  home.style.setProperty('bottom',window.innerWidth<=680?'10px':'16px','important');
-  home.style.setProperty('transform','none','important');
-}
-if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',separateFloatingNavControls);else separateFloatingNavControls();
-window.addEventListener('resize',separateFloatingNavControls);
-</script>
+
 
 </body>
 </html>
