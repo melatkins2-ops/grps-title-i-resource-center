@@ -1348,6 +1348,7 @@ body.non-title-i .approved-step.step2,body.non-title-i .approved-step.step3,body
   </div>
   
 <nav class="approved-nav" aria-label="Primary">
+  <button id="headerBackBtn" type="button" aria-label="Back" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.5 5 7.5 12l7 7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Back</span></button>
   <button type="button" onclick="show('home')" aria-label="Home"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11.5 12 4l9 7.5v8a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg><span>Home</span></button>
   <button type="button" onclick="document.getElementById('quickLinks')?.scrollIntoView({behavior:'smooth'})" aria-label="Resources"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h11a2 2 0 0 1 2 2v14H7a2 2 0 0 1-2-2zM7 4v14a2 2 0 0 0 2 2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M9 8h6M9 12h6M9 16h4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg><span>Resources</span></button>
   <button type="button" onclick="toggleApprovedHelp()" aria-label="Help"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M9.8 9.2a2.5 2.5 0 1 1 3.6 2.2c-.9.5-1.4 1-1.4 2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><circle cx="12" cy="17.2" r="1" fill="currentColor"/></svg><span>Help</span></button>
@@ -3201,9 +3202,6 @@ function toggleFullSample(){
 }
 </script>
 
-<button id="globalBackBtn" class="global-back-btn" type="button" aria-label="Go back to the previous CNA page">
-  <span aria-hidden="true">←</span> Back
-</button>
 
 
 
@@ -3220,5 +3218,60 @@ function toggleFullSample(){
   window.addEventListener('load', removeLegacyHome, {once:true});
 })();
 </script>
+<style id="v80-nav-layout-fix">
+/* v80: navigation belongs in the sticky header; no fixed controls may cover CNA content */
+#globalBackBtn,.global-back-btn,#persistentHomeButton,.persistent-home-button{display:none!important;visibility:hidden!important;pointer-events:none!important}
+body{padding-bottom:0!important}
+.approved-nav #headerBackBtn[hidden]{display:none!important}
+.approved-nav #headerBackBtn{display:inline-flex;align-items:center;gap:5px}
+.approved-nav #headerBackBtn svg{width:18px;height:18px}
+@media(max-width:1050px){
+  .approved-nav{display:flex!important;gap:8px!important}
+  .approved-nav button[aria-label="Resources"],.approved-nav button[aria-label="Help"],.approved-nav button[aria-label="My Plan"]{display:none!important}
+  .approved-nav button{padding:8px 10px!important}
+}
+@media(max-width:760px){
+  .approved-header{height:auto!important;min-height:72px!important;flex-wrap:wrap!important;padding:10px 14px!important}
+  .approved-brand{flex:1 1 60%!important}
+  .approved-nav{order:2;flex:0 0 auto!important}
+  .approved-school-selector{order:3;width:100%!important}
+  .approved-school-selector select{max-width:none!important;width:100%!important}
+}
+</style>
+<script id="v80-header-back">
+(function(){
+  function currentView(){return document.querySelector('.view.active')?.id||'home';}
+  function syncHeaderBack(){
+    var b=document.getElementById('headerBackBtn');
+    if(!b)return;
+    b.hidden=currentView()==='home';
+  }
+  function goBack(){
+    var current=currentView();
+    window.CNA_VIEW_HISTORY=window.CNA_VIEW_HISTORY||[];
+    var previous=window.CNA_VIEW_HISTORY.pop();
+    while(previous===current && window.CNA_VIEW_HISTORY.length) previous=window.CNA_VIEW_HISTORY.pop();
+    window.CNA_BACK_NAV=true;
+    try{
+      if(previous && document.getElementById(previous) && typeof show==='function') show(previous);
+      else if(typeof show==='function') show('home');
+    }finally{window.CNA_BACK_NAV=false;syncHeaderBack();}
+  }
+  function bind(){
+    document.querySelectorAll('#globalBackBtn,.global-back-btn,#persistentHomeButton,.persistent-home-button').forEach(function(el){el.remove();});
+    var b=document.getElementById('headerBackBtn');
+    if(b && b.dataset.bound!=='true'){b.dataset.bound='true';b.addEventListener('click',goBack);}
+    syncHeaderBack();
+  }
+  var originalShow=window.show;
+  if(typeof originalShow==='function'){
+    window.show=function(id){var r=originalShow.apply(this,arguments);syncHeaderBack();return r;};
+  }
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',bind);else bind();
+  window.addEventListener('load',bind,{once:true});
+})();
+</script>
+
 </body>
 </html>
+
