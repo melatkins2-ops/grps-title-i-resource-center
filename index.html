@@ -1244,14 +1244,6 @@ body.non-title-i .approved-step.step2,body.non-title-i .approved-step.step3,body
 /* v76: radically simplified model sample */
 .sample-lite-intro{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:22px 24px;border:1px solid #cfe0ef;border-radius:18px;background:#f7fbff;margin:18px 0}.sample-lite-intro h3{margin:6px 0 6px}.sample-lite-intro p{margin:0;max-width:760px}.sample-stepper{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin:18px 0 22px}.sample-step-tab{border:1px solid #caddeb;background:#fff;color:#163e73;border-radius:999px;padding:10px 12px;font-weight:800;display:flex;align-items:center;justify-content:center;gap:8px;cursor:pointer}.sample-step-tab span{display:inline-grid;place-items:center;width:26px;height:26px;border-radius:50%;background:#edf4fa}.sample-step-tab.active{background:#0b5da8;color:#fff;border-color:#0b5da8}.sample-step-tab.active span{background:#fff;color:#0b5da8}.sample-step-panel{display:none}.sample-step-panel.active{display:block}.sample-focus-card{max-width:880px;margin:0 auto;border:1px solid #d5e3ee;border-radius:20px;padding:28px 30px;background:#fff;box-shadow:0 6px 20px rgba(17,62,111,.06)}.sample-focus-card h3{font-size:1.5rem;margin:8px 0 20px}.sample-two-findings{display:grid;grid-template-columns:1fr 1fr;gap:14px}.sample-two-findings>div,.sample-evidence-mini>div{border-radius:14px;background:#f4f8fb;padding:16px}.sample-two-findings b,.sample-two-findings span,.sample-evidence-mini b,.sample-evidence-mini span{display:block}.sample-two-findings span,.sample-evidence-mini span{margin-top:4px;color:#466b91}.sample-takeaway{margin:20px 0 0;padding:14px 16px;border-left:4px solid #f28c28;background:#fff8f0;border-radius:10px}.sample-evidence-mini{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px}.sample-logic-strip{display:grid;grid-template-columns:110px 1fr;gap:12px;padding:16px 18px;background:#f4f8fb;border-radius:14px;margin:10px 0}.sample-logic-strip b{color:#0b4f8a}.sample-priority-callout{padding:18px;background:#eef6fc;border-radius:14px;font-size:1.08rem}.sample-ifthen{display:grid;gap:10px}.sample-ifthen>div{display:grid;grid-template-columns:105px 1fr;gap:12px;padding:15px 18px;border-radius:14px;background:#f4f8fb}.sample-ifthen b{color:#0b4f8a}.sample-nav-row{max-width:880px;margin:16px auto 0;display:flex;justify-content:space-between;gap:12px}.sample-footer-note{text-align:center;margin:24px 0 8px;color:#4d6d8c}.linklike{border:0;background:none;color:#076bc7;font-weight:800;text-decoration:underline;cursor:pointer;font:inherit}.sample-full-text{max-width:880px;margin:12px auto}.sample-more{margin-top:16px}.sample-more summary{cursor:pointer;font-weight:800;color:#0b5da8}@media(max-width:760px){.sample-lite-intro{display:block}.sample-lite-intro .primary{margin-top:16px;width:100%}.sample-stepper{grid-template-columns:1fr}.sample-step-tab{justify-content:flex-start}.sample-focus-card{padding:20px}.sample-two-findings,.sample-evidence-mini{grid-template-columns:1fr}.sample-logic-strip,.sample-ifthen>div{grid-template-columns:1fr}.sample-nav-row{flex-direction:column}.sample-nav-row button{width:100%}}
 
-/* v77 — keep floating Back and Home controls physically separated */
-#globalBackBtn{left:16px!important;right:auto!important;bottom:16px!important;transform:none!important;max-width:calc(50vw - 28px)!important}
-
-@media(max-width:680px){
-  #globalBackBtn{left:10px!important;right:auto!important;bottom:10px!important;max-width:44vw!important}
-  
-}
-
 </style>
 
 <style id="v71-mde-cycle-links">
@@ -1285,22 +1277,8 @@ body.non-title-i .approved-step.step2,body.non-title-i .approved-step.step3,body
 /* v76: make the four data types explicit without adding visual overload */
 .sample-four-data-compact{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:18px 0}.sample-four-data-compact>div{border:1px solid #cfe0ef;border-radius:14px;padding:14px 16px;background:#f8fbfe;display:flex;flex-direction:column;gap:5px}.sample-four-data-compact b{color:#123e78;font-size:.98rem}.sample-four-data-compact span{color:#355d86;line-height:1.4}.sample-synthesis-callout{margin:14px 0;padding:16px 18px;border-left:5px solid #f28c28;background:#fff8f0;border-radius:12px;display:flex;flex-direction:column;gap:5px}.sample-synthesis-callout b{color:#123e78}.sample-data-link{display:inline-block;margin:0 0 12px;padding:7px 10px;border-radius:999px;background:#eef5fb;color:#355d86;font-size:.9rem;line-height:1.25}.sample-data-link b{color:#123e78}@media(max-width:760px){.sample-four-data-compact{grid-template-columns:1fr}.sample-data-link{border-radius:12px}}
 
-/* v78 — eliminate floating Home overlap on every view.
-   Home lives in the sticky header; Back remains bottom-left. */
-
-@media(max-width:1050px){
-  .approved-nav{display:flex!important;margin-left:auto!important}
-  .approved-nav button{display:none!important}
-  .approved-nav button:first-child{display:inline-flex!important;align-items:center!important;gap:5px!important;border:1px solid #cfe0ee!important;border-radius:999px!important;padding:8px 12px!important;background:#fff!important}
-}
-@media(max-width:680px){
-  .approved-header{align-items:center!important}
-  .approved-nav{order:2!important}
-  .approved-school-selector{order:3!important}
-}
 </style>
 
-<!-- v79: floating Home control physically removed. Header Home is the only Home control. -->
 <meta name="grps-build" content="v79-home-removed">
 
 <style id="v79-nav-safety">
@@ -1350,7 +1328,7 @@ body.non-title-i .approved-step.step2,body.non-title-i .approved-step.step3,body
 <nav class="approved-nav" aria-label="Primary">
   <button id="headerBackBtn" type="button" aria-label="Back" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.5 5 7.5 12l7 7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Back</span></button>
   <button type="button" onclick="show('home')" aria-label="Home"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11.5 12 4l9 7.5v8a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg><span>Home</span></button>
-  <button type="button" onclick="document.getElementById('quickLinks')?.scrollIntoView({behavior:'smooth'})" aria-label="Resources"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h11a2 2 0 0 1 2 2v14H7a2 2 0 0 1-2-2zM7 4v14a2 2 0 0 0 2 2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M9 8h6M9 12h6M9 16h4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg><span>Resources</span></button>
+  <button type="button" onclick="goToResources()" aria-label="Resources"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h11a2 2 0 0 1 2 2v14H7a2 2 0 0 1-2-2zM7 4v14a2 2 0 0 0 2 2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M9 8h6M9 12h6M9 16h4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg><span>Resources</span></button>
   <button type="button" onclick="toggleApprovedHelp()" aria-label="Help"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M9.8 9.2a2.5 2.5 0 1 1 3.6 2.2c-.9.5-1.4 1-1.4 2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><circle cx="12" cy="17.2" r="1" fill="currentColor"/></svg><span>Help</span></button>
   <button type="button" onclick="show('finalPlan')" aria-label="My Plan"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="3" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M5.5 20c.6-4 3-6 6.5-6s5.9 2 6.5 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg><span>My Plan</span></button>
 </nav>
@@ -1571,11 +1549,11 @@ body.non-title-i .approved-step.step2,body.non-title-i .approved-step.step3,body
         </div>
 
         <div id="domain" class="view panel">
-          <button class="back" data-action="home">← Back to domains</button>
+          <button class="back" type="button" onclick="show('dataType')">← Back to domains</button>
           <div class="kicker">Explore</div><h2 id="domainTitle"></h2><p id="domainIntro" class="section-help"></p>
           <div id="domainReadiness" class="readiness-bar"></div><div id="domainPublic" class="domain-public"></div>
           <div id="prompts"></div>
-          <div class="actions"><button class="secondary" data-action="home">Save & return</button><button class="primary" id="completeDomain">Mark domain reviewed</button></div>
+          <div class="actions"><button class="secondary" type="button" onclick="show('dataType')">Save & return to domains</button><button class="primary" id="completeDomain">Mark domain reviewed</button></div>
         </div>
 
         <div id="needs" class="view panel">
@@ -1925,7 +1903,7 @@ let currentDomain=null;
 
 state.sourceChecks=state.sourceChecks||{}; state.evidenceTypes=state.evidenceTypes||{}; state.qualityChecks=state.qualityChecks||{}; state.logicModels=state.logicModels||{};
 function save(){state.school=$('schoolSelect').value;state.year=$('year').value;try{localStorage.setItem('grpsCNA',JSON.stringify(state))}catch(e){console.warn('Autosave unavailable.',e)}updateStats()}
-function show(id){if(id!=='nonTitleI' && !guardTitleIView(id))return;const currentView=document.querySelector('.view.active')?.id;if(currentView&&currentView!==id&&!window.CNA_BACK_NAV){window.CNA_VIEW_HISTORY=window.CNA_VIEW_HISTORY||[];window.CNA_VIEW_HISTORY.push(currentView);if(window.CNA_VIEW_HISTORY.length>20)window.CNA_VIEW_HISTORY.shift();}document.querySelectorAll('.view').forEach(v=>v.classList.remove('active'));const el=$(id);if(el)el.classList.add('active');document.querySelectorAll('.nav button').forEach(b=>b.classList.toggle('active',b.dataset.view===id));if(id==='home'||id==='cnaHub')renderCards();if(id==='needs')renderNeeds();if(id==='why')renderWhy();if(id==='priorities')renderPriorities();if(id==='logicBridge')renderLogicBridge();if(id==='story')renderStory();if(id==='req8'){renderReq8Status();renderReq8Uploads();renderPFEContext();}if(id==='smartConnections')renderSmartConnections();if(id==='planBuilder')renderPlanBuilder();if(id==='crosswalk')renderCrosswalk();if(id==='finalPlan')renderTitleIReadiness();if(/^req[2-9]$/.test(id)){renderSmartCarryForward();}window.scrollTo(0,0);if(typeof updateGlobalBackVisibility==='function')updateGlobalBackVisibility()}
+function show(id){if(id!=='nonTitleI' && !guardTitleIView(id))return;const currentView=document.querySelector('.view.active')?.id;if(currentView&&currentView!==id&&!window.CNA_BACK_NAV){window.CNA_VIEW_HISTORY=window.CNA_VIEW_HISTORY||[];window.CNA_VIEW_HISTORY.push(currentView);if(window.CNA_VIEW_HISTORY.length>20)window.CNA_VIEW_HISTORY.shift();}document.querySelectorAll('.view').forEach(v=>v.classList.remove('active'));const el=$(id);if(el)el.classList.add('active');document.querySelectorAll('.nav button').forEach(b=>b.classList.toggle('active',b.dataset.view===id));if(id==='home'||id==='cnaHub')renderCards();if(id==='needs')renderNeeds();if(id==='why')renderWhy();if(id==='priorities')renderPriorities();if(id==='logicBridge')renderLogicBridge();if(id==='story')renderStory();if(id==='req8'){renderReq8Status();renderReq8Uploads();renderPFEContext();}if(id==='smartConnections')renderSmartConnections();if(id==='planBuilder')renderPlanBuilder();if(id==='crosswalk')renderCrosswalk();if(id==='finalPlan')renderTitleIReadiness();if(/^req[2-9]$/.test(id)){renderSmartCarryForward();}window.scrollTo(0,0)}
 function domainCompletion(d){let n=0;d.prompts.forEach((p,i)=>{const a=state.answers[d.id+'_'+i]||{};if((a.note&&a.note.trim())||a.choice)n++});return{done:n,total:d.prompts.length}}
 
 function schoolMetricValue(m,suffix=''){
@@ -2509,7 +2487,7 @@ function openDataType(groupId){
       </div>
       <div class="domain-footer">
         <div class="card-progress">${c.done}/${c.total} prompts captured</div>
-        <div class="go" aria-hidden="true">→</div>
+        <span class="domain-open-label" aria-hidden="true">Open domain →</span>
       </div>
     </div>`;
   }).join('');
@@ -2663,38 +2641,6 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
 
 
 
-function initGlobalBackButton(){
-  const btn=document.getElementById('globalBackBtn');
-  if(!btn || btn.dataset.bound==='true') return;
-  btn.dataset.bound='true';
-  window.CNA_VIEW_HISTORY=window.CNA_VIEW_HISTORY||[];
-  btn.addEventListener('click',function(e){
-    e.preventDefault();
-    const current=document.querySelector('.view.active')?.id||'';
-    let previous=window.CNA_VIEW_HISTORY.pop();
-    while(previous===current && window.CNA_VIEW_HISTORY.length){
-      previous=window.CNA_VIEW_HISTORY.pop();
-    }
-    window.CNA_BACK_NAV=true;
-    try{
-      if(previous && document.getElementById(previous) && typeof show==='function') show(previous);
-      else if(typeof show==='function') show('home');
-      else window.location.hash='';
-    }finally{
-      window.CNA_BACK_NAV=false;
-      updateGlobalBackVisibility();
-    }
-  });
-  updateGlobalBackVisibility();
-}
-function updateGlobalBackVisibility(){
-  const btn=document.getElementById('globalBackBtn');
-  if(!btn)return;
-  const current=document.querySelector('.view.active')?.id||'home';
-  btn.hidden=(current==='home');
-}
-if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',initGlobalBackButton);
-else initGlobalBackButton();
 
 
 const TITLEI_PLAN_KEY='grpsTitleIPlan_v1';
@@ -3208,23 +3154,21 @@ function toggleFullSample(){
 
 
 
-<script id="v79-nav-guard">
-(function(){
-  function removeLegacyHome(){
-    document.querySelectorAll('#persistentHomeButton,.persistent-home-button').forEach(function(el){el.remove();});
-  }
-  removeLegacyHome();
-  document.addEventListener('DOMContentLoaded', removeLegacyHome, {once:true});
-  window.addEventListener('load', removeLegacyHome, {once:true});
-})();
-</script>
-<style id="v80-nav-layout-fix">
-/* v80: navigation belongs in the sticky header; no fixed controls may cover CNA content */
-#globalBackBtn,.global-back-btn,#persistentHomeButton,.persistent-home-button{display:none!important;visibility:hidden!important;pointer-events:none!important}
+<style id="v81-layout-audit-fix">
+/* v81 — final navigation and bottom-of-page safety rules.
+   Site navigation stays in normal/sticky header flow. Nothing site-controlled floats over page content. */
+#globalBackBtn,.global-back-btn,#persistentHomeButton,.persistent-home-button{display:none!important;visibility:hidden!important;pointer-events:none!important;position:static!important}
 body{padding-bottom:0!important}
 .approved-nav #headerBackBtn[hidden]{display:none!important}
 .approved-nav #headerBackBtn{display:inline-flex;align-items:center;gap:5px}
 .approved-nav #headerBackBtn svg{width:18px;height:18px}
+.domain{overflow:hidden}
+.domain-footer{display:flex!important;align-items:center!important;justify-content:space-between!important;gap:16px!important;position:static!important;margin-top:auto!important;padding-top:16px!important}
+.card-progress{position:static!important;min-width:0!important;flex:1 1 auto!important}
+.go{display:none!important}
+.domain-open-label{position:static!important;display:inline-flex!important;align-items:center!important;justify-content:center!important;flex:0 0 auto!important;min-height:36px!important;padding:7px 10px!important;border-radius:999px!important;background:#eef5fb!important;color:#0b5da8!important;font-size:11px!important;font-weight:800!important;white-space:nowrap!important}
+#dataTypeDomains .domain{padding-bottom:16px!important}
+.view{scroll-margin-top:96px}
 @media(max-width:1050px){
   .approved-nav{display:flex!important;gap:8px!important}
   .approved-nav button[aria-label="Resources"],.approved-nav button[aria-label="Help"],.approved-nav button[aria-label="My Plan"]{display:none!important}
@@ -3236,15 +3180,16 @@ body{padding-bottom:0!important}
   .approved-nav{order:2;flex:0 0 auto!important}
   .approved-school-selector{order:3;width:100%!important}
   .approved-school-selector select{max-width:none!important;width:100%!important}
+  .domain-footer{align-items:flex-start!important;flex-direction:column!important;gap:9px!important}
+  .domain-open-label{align-self:flex-start!important}
 }
 </style>
-<script id="v80-header-back">
+<script id="v81-header-navigation">
 (function(){
   function currentView(){return document.querySelector('.view.active')?.id||'home';}
   function syncHeaderBack(){
     var b=document.getElementById('headerBackBtn');
-    if(!b)return;
-    b.hidden=currentView()==='home';
+    if(b)b.hidden=currentView()==='home';
   }
   function goBack(){
     var current=currentView();
@@ -3257,8 +3202,14 @@ body{padding-bottom:0!important}
       else if(typeof show==='function') show('home');
     }finally{window.CNA_BACK_NAV=false;syncHeaderBack();}
   }
+  window.goToResources=function(){
+    if(typeof show==='function')show('home');
+    window.setTimeout(function(){
+      var target=document.getElementById('quickLinks');
+      if(target)target.scrollIntoView({behavior:'smooth',block:'start'});
+    },50);
+  };
   function bind(){
-    document.querySelectorAll('#globalBackBtn,.global-back-btn,#persistentHomeButton,.persistent-home-button').forEach(function(el){el.remove();});
     var b=document.getElementById('headerBackBtn');
     if(b && b.dataset.bound!=='true'){b.dataset.bound='true';b.addEventListener('click',goBack);}
     syncHeaderBack();
@@ -3272,6 +3223,7 @@ body{padding-bottom:0!important}
 })();
 </script>
 
+<!-- GRPS School Needs & Title I Planning build v81-full-audit -->
 </body>
 </html>
 
