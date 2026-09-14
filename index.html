@@ -1135,37 +1135,11 @@ body.non-title-i .sidebar-utility{display:none!important}
 
 
 /* v53 persistent Home button */
-.persistent-home-button{
-  position:fixed;
-  right:22px;
-  bottom:22px;
-  z-index:9999;
-  display:flex;
-  align-items:center;
-  gap:7px;
-  min-height:44px;
-  padding:9px 13px;
-  border:2px solid #fff;
-  border-radius:999px;
-  background:#173f63;
-  color:#fff;
-  box-shadow:0 5px 18px rgba(23,50,77,.22);
-  font:inherit;
-  font-size:12px;
-  font-weight:900;
-  cursor:pointer;
-}
-.persistent-home-button:hover,.persistent-home-button:focus{
-  background:#245b84;
-  outline:3px solid rgba(215,107,45,.35);
-  outline-offset:2px;
-}
-.persistent-home-button span:first-child{font-size:18px;line-height:1}
-@media(max-width:700px){
-  .persistent-home-button{right:14px;bottom:14px;width:48px;height:48px;padding:0;justify-content:center}
-  .persistent-home-button .home-label{display:none}
-}
-@media print{.persistent-home-button{display:none!important}}
+
+
+
+
+@media print{}
 
 
 /* v54 Blandford CNA-only fix */
@@ -1206,7 +1180,7 @@ body.non-title-i #programTypeBanner{display:none!important}
 }
 #globalBackBtn:hover,#globalBackBtn:focus{background:#f4f9fc!important}
 
-.persistent-home-button{position:fixed!important;right:20px!important;bottom:20px!important;z-index:1500!important;background:#0b4d82!important;border:3px solid #fff!important}
+
 .back-link{position:static!important;right:auto!important;bottom:auto!important;left:auto!important;top:auto!important;transform:none!important;margin:0 0 16px!important}
 .approved-header{height:82px;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:0 3.4vw;background:#fff;border-bottom:1px solid #dbe5ee;position:sticky;top:0;z-index:120}
 .approved-brand{display:flex;align-items:center;gap:18px}
@@ -1260,7 +1234,7 @@ body.non-title-i .approved-step.step2,body.non-title-i .approved-step.step3,body
 @media(max-width:1050px){.approved-school-card{max-height:none;overflow:visible}}
 @media(max-width:680px){
   #globalBackBtn{left:12px!important;bottom:12px!important;min-height:46px!important}
-  .persistent-home-button{right:12px!important;bottom:12px!important}
+  
 }
 
 
@@ -1272,10 +1246,10 @@ body.non-title-i .approved-step.step2,body.non-title-i .approved-step.step3,body
 
 /* v77 — keep floating Back and Home controls physically separated */
 #globalBackBtn{left:16px!important;right:auto!important;bottom:16px!important;transform:none!important;max-width:calc(50vw - 28px)!important}
-.persistent-home-button{right:16px!important;left:auto!important;bottom:16px!important;transform:none!important;max-width:calc(50vw - 28px)!important}
+
 @media(max-width:680px){
   #globalBackBtn{left:10px!important;right:auto!important;bottom:10px!important;max-width:44vw!important}
-  .persistent-home-button{right:10px!important;left:auto!important;bottom:10px!important;max-width:44vw!important}
+  
 }
 
 </style>
@@ -1313,7 +1287,7 @@ body.non-title-i .approved-step.step2,body.non-title-i .approved-step.step3,body
 
 /* v78 — eliminate floating Home overlap on every view.
    Home lives in the sticky header; Back remains bottom-left. */
-#persistentHomeButton{display:none!important}
+
 @media(max-width:1050px){
   .approved-nav{display:flex!important;margin-left:auto!important}
   .approved-nav button{display:none!important}
@@ -1326,13 +1300,17 @@ body.non-title-i .approved-step.step2,body.non-title-i .approved-step.step3,body
 }
 </style>
 
-<!-- v78: Home moved into sticky header; floating Home disabled globally to prevent overlap with page controls. -->
+<!-- v79: floating Home control physically removed. Header Home is the only Home control. -->
+<meta name="grps-build" content="v79-home-removed">
+
+<style id="v79-nav-safety">
+/* v79 — one navigation system only: header Home + fixed Back. */
+#persistentHomeButton,.persistent-home-button{display:none!important;visibility:hidden!important;pointer-events:none!important}
+.view{padding-bottom:76px}
+@media(max-width:760px){.view{padding-bottom:84px}}
+</style>
 </head>
 <body>
-<button id="persistentHomeButton" class="persistent-home-button" type="button" onclick="show('home')" aria-label="Return to Home" title="Home">
-  <span aria-hidden="true">⌂</span><span class="home-label">Home</span>
-</button>
-
 <div class="app">
   <aside class="sidebar">
     <div class="brand">GRPS<span>◆</span><small>Grand Rapids Public Schools</small></div>
@@ -3231,5 +3209,16 @@ function toggleFullSample(){
 
 
 
+
+<script id="v79-nav-guard">
+(function(){
+  function removeLegacyHome(){
+    document.querySelectorAll('#persistentHomeButton,.persistent-home-button').forEach(function(el){el.remove();});
+  }
+  removeLegacyHome();
+  document.addEventListener('DOMContentLoaded', removeLegacyHome, {once:true});
+  window.addEventListener('load', removeLegacyHome, {once:true});
+})();
+</script>
 </body>
 </html>
