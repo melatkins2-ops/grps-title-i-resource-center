@@ -2,6 +2,9 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>GRPS Title I Targeted Assistance & Schoolwide Plan</title>
 <style>
@@ -1279,7 +1282,7 @@ body.non-title-i .approved-step.step2,body.non-title-i .approved-step.step3,body
 
 </style>
 
-<meta name="grps-build" content="v79-home-removed">
+<meta name="grps-build" content="v82-structural-cna-cards">
 
 <style id="v79-nav-safety">
 /* v79 — one navigation system only: header Home + fixed Back. */
@@ -2479,19 +2482,17 @@ function openDataType(groupId){
     const d=domains.find(x=>x.id===id);
     const i=domains.findIndex(x=>x.id===id);
     const c=domainCompletion(d);
-    return `<div class="domain" data-domain="${d.id}">
-      <div class="domain-main">
-        <h3>${i+1}. ${escapeHtml(d.name)}</h3>
-        <p>${escapeHtml(d.q)}</p>
-        ${state.reviewed.includes(d.id)?'<div class="done">✓ Reviewed</div>':''}
-      </div>
-      <div class="domain-footer">
-        <div class="card-progress">${c.done}/${c.total} prompts captured</div>
-        <span class="domain-open-label" aria-hidden="true">Open domain →</span>
-      </div>
-    </div>`;
+    return `<button type="button" class="cna-domain-card" data-domain="${d.id}" aria-label="Open ${escapeHtml(d.name)} domain">
+      <span class="cna-domain-card-top">
+        <span class="cna-domain-title">${i+1}. ${escapeHtml(d.name)}</span>
+        ${state.reviewed.includes(d.id)?'<span class="cna-reviewed-badge">✓ Reviewed</span>':''}
+      </span>
+      <span class="cna-domain-question">${escapeHtml(d.q)}</span>
+      <span class="cna-domain-meta">${c.done}/${c.total} prompts captured</span>
+      <span class="cna-domain-open">Open domain</span>
+    </button>`;
   }).join('');
-  $('dataTypeDomains').querySelectorAll('.domain').forEach(card=>card.addEventListener('click',()=>openDomain(card.dataset.domain)));
+  $('dataTypeDomains').querySelectorAll('.cna-domain-card').forEach(card=>card.addEventListener('click',()=>openDomain(card.dataset.domain)));
   show('dataType');
 }
 
@@ -3224,6 +3225,48 @@ body{padding-bottom:0!important}
 </script>
 
 <!-- GRPS School Needs & Title I Planning build v81-full-audit -->
+
+<style id="v82-structural-cna-fix">
+/* v82: CNA navigation/cards use document flow only. No controls occupy a page corner. */
+#globalBackBtn,.global-back-btn,#persistentHomeButton,.persistent-home-button,.go{display:none!important;visibility:hidden!important;pointer-events:none!important}
+#dataTypeDomains{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:14px!important}
+.cna-domain-card{
+  appearance:none!important;-webkit-appearance:none!important;position:static!important;
+  display:flex!important;flex-direction:column!important;align-items:stretch!important;
+  width:100%!important;min-height:190px!important;padding:18px!important;margin:0!important;
+  border:1px solid #d7e3ec!important;border-top:4px solid #176aa5!important;border-radius:12px!important;
+  background:#fff!important;color:#173b5c!important;text-align:left!important;cursor:pointer!important;
+  box-shadow:none!important;overflow:visible!important;
+}
+.cna-domain-card:hover,.cna-domain-card:focus-visible{border-top-color:#f36b21!important;box-shadow:0 4px 14px rgba(18,56,94,.08)!important;outline:none!important}
+.cna-domain-card-top{display:flex!important;align-items:flex-start!important;justify-content:space-between!important;gap:12px!important;position:static!important}
+.cna-domain-title{display:block!important;font-size:17px!important;font-weight:850!important;line-height:1.25!important;color:#153a5d!important}
+.cna-reviewed-badge{display:inline-flex!important;position:static!important;flex:0 0 auto!important;padding:4px 8px!important;border-radius:999px!important;background:#edf7f1!important;color:#2e6748!important;font-size:10px!important;font-weight:850!important}
+.cna-domain-question{display:block!important;margin-top:9px!important;font-size:12.5px!important;line-height:1.5!important;color:#536b80!important}
+.cna-domain-meta{display:block!important;margin-top:auto!important;padding-top:16px!important;font-size:10.5px!important;color:#758799!important;position:static!important}
+.cna-domain-open{display:inline-flex!important;align-self:flex-start!important;position:static!important;margin-top:9px!important;padding:7px 11px!important;border-radius:999px!important;background:#eef5fb!important;color:#0b5da8!important;font-size:11px!important;font-weight:850!important}
+.v82-build-stamp{display:block!important;text-align:center!important;margin:24px 0 8px!important;font-size:9px!important;letter-spacing:.08em!important;text-transform:uppercase!important;color:#8a9aaa!important}
+@media(max-width:760px){#dataTypeDomains{grid-template-columns:1fr!important}.cna-domain-card{min-height:0!important}}
+@media print{.v82-build-stamp{display:none!important}}
+</style>
+<script id="v82-structural-cna-runtime">
+(function(){
+  function removeLegacyCornerControls(){
+    document.querySelectorAll('#globalBackBtn,.global-back-btn,#persistentHomeButton,.persistent-home-button').forEach(function(el){el.remove();});
+  }
+  function addBuildStamp(){
+    if(document.querySelector('.v82-build-stamp')) return;
+    var main=document.querySelector('.approved-main')||document.querySelector('main')||document.body;
+    var stamp=document.createElement('div'); stamp.className='v82-build-stamp'; stamp.textContent='GRPS School Needs & Title I Planning • Build v82';
+    main.appendChild(stamp);
+  }
+  function run(){removeLegacyCornerControls();addBuildStamp();}
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',run);else run();
+  window.addEventListener('load',run);
+  new MutationObserver(removeLegacyCornerControls).observe(document.documentElement,{childList:true,subtree:true});
+})();
+</script>
+
 </body>
 </html>
 
